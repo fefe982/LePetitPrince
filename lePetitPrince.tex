@@ -1,3 +1,4 @@
+% !TeX spellcheck = fr_FR
 \documentclass{report}
 \usepackage[left=0.5in, right=0.5in, top=1.0in, bottom=1.0in]{geometry}
 \usepackage{fontspec}
@@ -10,10 +11,10 @@
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{footnotebackref}
 
-\renewcommand{\chaptername}{Le Chaptier}
+\renewcommand{\chaptername}{Le Chapitre}
 \renewcommand{\thechapter}{\Roman{chapter}}
 \usepackage{titlesec}
-\titleformat{\chapter}{\normalfont\Huge\bfseries}{Le Chaptire\  \thechapter}{20pt}{\Huge}
+\titleformat{\chapter}{\normalfont\Huge\bfseries}{Le Chapitre\  \thechapter}{20pt}{\Huge}
 
 \usepackage{graphicx}
 
@@ -23,24 +24,29 @@
 \if\relax\detokenize{#2}\relax\else\pos{#2} \fi%
 #3}}
 
-\newcommand{\parachapter}[2][]{\end{paracol}\chapter[#1]{#2}\begin{paracol}{2}}
-\usepackage{paracol}
-\newcommand{\incpic}[1]{%
-\end{paracol}
+%\newcommand{\parachapter}[2][]{\end{paracol}\chapter[#1]{#2}\begin{paracol}{2}}
+\newcommand{\parachapter}[2][]{\chapter[#1]{#2}}
+%\usepackage{paracol}
+\newcommand{\incpic}[1]{%\end{paracol}
 \begin{center}
     \includegraphics[width=0.25\linewidth]{#1}
-\end{center}
-\begin{paracol}{2}}
+\end{center}%\begin{paracol}{2}
+}
 
-\newcommand{\maincol}{\switchcolumn[0]*\enablehyphenation}
-
-\newcommand{\ipacol}{\switchcolumn[1]\disablehyphenation}
+%\newcommand{\maincol}{\switchcolumn[0]*\enablehyphenation}
+\newcommand{\maincol}{
+    
+}
+%\newcommand{\ipacol}{\switchcolumn[1]\disablehyphenation}
+\newcommand{\ipacol}{
+    
+}
 
 \title{Le Petit Prince}
 \begin{document}
 \sloppy
-\footnotelayout{m}
-\begin{paracol}{2}
+%\footnotelayout{m}
+%\begin{paracol}{2}
 \maincol
 \begin{center}
     \Huge A Léon Werth
@@ -52,7 +58,7 @@
 \maincol
 Je demande pardon aux enfants d'avoir dédié ce livre à une grande personne. J'ai une excuse sérieuse: cette grande personne est le meilleur\ft[le meilleur]{}{the best} ami que j'ai au monde. J'ai une autre excuse: cette grande personne peut tout comprendre, même les livres pour enfants. J'ai une troisième excuse: cette grande personne habite la France où elle a faim et froid. Elle a besoin d'être consolée. Si toutes ces excuses ne suffisent pas, je veux bien dédier ce livre à l'enfant qu'a été autrefois cette grande personne. Toutes les grandes personnes ont d'abord été des enfants. (Mais peu d'entre\ft{prep.}{between} elles s'en souviennent\ft{v.pr. Prés.}{(se souvenir de) to remember}). Je corrige\ft{v.t.}{to correct} donc ma dédicace\ft{n.f.}{dedication}:
 \ipacol
-ʒə dəmɑ̃d paʁdɔ̃ oz- ɑ̃fɑ̃ davwaʁ dedje sə livʁ a yn ɡʁɑ̃d pɛʁsɔn. ʒe yn ɛkskyz seʁjøːz: sɛt ɡʁɑ̃d pɛʁsɔn ɛ lə mɛjœʁ ami kə ʒe o mɔ̃ːd. ʒe yn otʁ ɛkskyːz: sɛt ɡʁɑ̃d pɛʁsɔn pø tu kɔ̃pʁɑ̃ːdʁ, mɛm le livʁə puʁ ɑ̃fɑ̃. ʒe yn tʁwazjɛm ɛkskyːz: sɛt ɡʁɑ̃d pɛʁsɔn abit la fʁɑ̃s u ɛl a fɛ̃ e fʁwa. ɛl a bəzwɛ̃ dɛtʁə kɔ̃sɔle. si tut sez- ɛkskyz nə syfiz pa, ʒə vø bjɛ̃ dedje sə livʁ a lɑ̃fɑ̃ ka ete otʁəfwa sɛt ɡʁɑ̃d pɛʁsɔn. tut le ɡʁɑ̃d pɛʁsɔn ɔ̃ dabɔʁ ete dez- ɑ̃fɑ̃. (mɛ pø dɑ̃tʁ ɛl sɑ̃ suvjɛn). ʒə kɔʁiʒ dɔ̃k ma dedikas:
+%ʒə dəmɑ̃d paʁdɔ̃ oz- ɑ̃fɑ̃ davwaʁ dedje sə livʁ a yn ɡʁɑ̃d pɛʁsɔn. ʒe yn ɛkskyz seʁjøːz: sɛt ɡʁɑ̃d pɛʁsɔn ɛ lə mɛjœʁ ami kə ʒe o mɔ̃ːd. ʒe yn otʁ ɛkskyːz: sɛt ɡʁɑ̃d pɛʁsɔn pø tu kɔ̃pʁɑ̃ːdʁ, mɛm le livʁə puʁ ɑ̃fɑ̃. ʒe yn tʁwazjɛm ɛkskyːz: sɛt ɡʁɑ̃d pɛʁsɔn abit la fʁɑ̃s u ɛl a fɛ̃ e fʁwa. ɛl a bəzwɛ̃ dɛtʁə kɔ̃sɔle. si tut sez- ɛkskyz nə syfiz pa, ʒə vø bjɛ̃ dedje sə livʁ a lɑ̃fɑ̃ ka ete otʁəfwa sɛt ɡʁɑ̃d pɛʁsɔn. tut le ɡʁɑ̃d pɛʁsɔn ɔ̃ dabɔʁ ete dez- ɑ̃fɑ̃. (mɛ pø dɑ̃tʁ ɛl sɑ̃ suvjɛn). ʒə kɔʁiʒ dɔ̃k ma dedikas:
 \maincol
 \begin{quote}
     \centering
@@ -60,131 +66,131 @@ Je demande pardon aux enfants d'avoir dédié ce livre à une grande personne. J
 
     quand il était petit garçon
 \end{quote}
-\ipacol
-\begin{quote}
-    \centering
-    a leɔ̃ wɛʁt
-
-    kɑ̃ il etɛ pəti ɡaʁsɔ̃
-\end{quote}
+%\ipacol
+%\begin{quote}
+%    \centering
+%    a leɔ̃ wɛʁt
+%
+%    kɑ̃ il etɛ pəti ɡaʁsɔ̃
+%\end{quote}
 \maincol
 
 \parachapter[I]{} %Le Chaptire I
 \maincol
 Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s'appelait «~Histoires Vécues~». Ça représentait un serpent boa qui avalait un fauve. Voilà la copie du dessin.
 \ipacol
-lɔʁskə ʒavɛ siz ɑ̃ ʒe vy, yn fwa, yn maɲifik imaːʒ, dɑ̃ ɛ̃ livʁə syʁ la fɔʁɛ vjɛʁʒ ki saplɛ «~istwaʁ veky~». sa ʁəpʁezɑ̃tɛ ɛ̃ sɛʁpɑ̃ bɔa ki avalɛ ɛ̃ foːv. vwala la kɔpi dy desɛ̃.
+%lɔʁskə ʒavɛ siz ɑ̃ ʒe vy, yn fwa, yn maɲifik imaːʒ, dɑ̃ ɛ̃ livʁə syʁ la fɔʁɛ vjɛʁʒ ki saplɛ «~istwaʁ veky~». sa ʁəpʁezɑ̃tɛ ɛ̃ sɛʁpɑ̃ bɔa ki avalɛ ɛ̃ foːv. vwala la kɔpi dy desɛ̃.
 \maincol
 \incpic{pic/image1.jpeg}
 \maincol
 On disait dans le livre: «~Les serpents boas avalent leur proie tout entière, sans la mâcher. Ensuite\ft{adv.}{then} ils ne peuvent plus bouger\ft[bouger]{v.i.}{to move} et ils dorment pendant les six mois de leur digestion~».
 \ipacol
-ɔ̃ dizɛ dɑ̃ lə liːvʁ: «~le sɛʁpɑ̃ bɔa aval lœʁ pʁwa tu ɑ̃tjɛːʁ, sɑ̃ la maʃe. ɑ̃sɥit il nə pœv ply buʒe e il dɔʁm pɑ̃dɑ̃ le si mwa də lœʁ diʒɛstjɔ̃~».
+%ɔ̃ dizɛ dɑ̃ lə liːvʁ: «~le sɛʁpɑ̃ bɔa aval lœʁ pʁwa tu ɑ̃tjɛːʁ, sɑ̃ la maʃe. ɑ̃sɥit il nə pœv ply buʒe e il dɔʁm pɑ̃dɑ̃ le si mwa də lœʁ diʒɛstjɔ̃~».
 \maincol
 J'ai alors beaucoup réfléchi sur les aventures de la jungle et, à mon tour, j'ai réussi, avec un crayon de couleur, à tracer mon premier dessin. Mon dessin numéro 1. Il était comme ça:
 \ipacol
-ʒe alɔʁ boku ʁefleʃi syʁ lez- avɑ̃tyʁ də la ʒɛ̃ɡl e, a mɔ̃ tuːʁ, ʒe ʁeysi, avɛk ɛ̃ kʁɛjɔ̃ də kulœːʁ, a tʁase mɔ̃ pʁəmje desɛ̃. mɔ̃ desɛ̃ nymeʁo ɛ̃. il etɛ kɔm sa:
+%ʒe alɔʁ boku ʁefleʃi syʁ lez- avɑ̃tyʁ də la ʒɛ̃ɡl e, a mɔ̃ tuːʁ, ʒe ʁeysi, avɛk ɛ̃ kʁɛjɔ̃ də kulœːʁ, a tʁase mɔ̃ pʁəmje desɛ̃. mɔ̃ desɛ̃ nymeʁo ɛ̃. il etɛ kɔm sa:
 \maincol
 \incpic{pic/image2.png}
 \maincol
-J'ai montré\ft[montrer]{v.t.}{to show} mon chef d'œuvre aux grandes personnes et je leur ai demandé si mon dessin leur faisait\ft[faire]{Impar.}{} peur.
+J'ai montré\ft[montrer]{v.t.}{to show} mon chef d'œuvre aux grandes personnes et je leur ai demandé si mon dessin leur faisait peur.
 \ipacol
-ʒe mɔ̃tʁe mɔ̃ ʃɛf dœvʁ o ɡʁɑ̃d pɛʁsɔn e ʒə lœʁ e dəmɑ̃de si mɔ̃ desɛ̃ lœʁ fəzɛ pœːʁ.
+%ʒe mɔ̃tʁe mɔ̃ ʃɛf dœvʁ o ɡʁɑ̃d pɛʁsɔn e ʒə lœʁ e dəmɑ̃de si mɔ̃ desɛ̃ lœʁ fəzɛ pœːʁ.
 \maincol
 Elles m'ont répondu: «~Pourquoi un chapeau ferait-il peur?~»
 \ipacol
-ɛl mɔ̃ ʁepɔ̃dy: «~puʁkwa ɛ̃ ʃapo fəʁɛ-til pœːʁ?~»
+%ɛl mɔ̃ ʁepɔ̃dy: «~puʁkwa ɛ̃ ʃapo fəʁɛ-til pœːʁ?~»
 \maincol
 Mon dessin ne représentait pas un chapeau. Il représentait un serpent boa qui digérait un éléphant. J'ai alors dessiné l'intérieur du serpent boa, afin que\ft[afin que]{}{in order, so that} les grandes personnes puissent\ft[pouvoir]{3 p.p Prés.subj.}{} comprendre. Elles ont toujours besoin d'explications. Mon dessin numéro 2 était comme ça:
 \ipacol
-mɔ̃ desɛ̃ nə ʁəpʁezɑ̃tɛ pa ɛ̃ ʃapo. il ʁəpʁezɑ̃tɛ ɛ̃ sɛʁpɑ̃ bɔa ki diʒeʁɛ ɛ̃n- elefɑ̃. ʒe alɔʁ desine lɛ̃teʁjœʁ dy sɛʁpɑ̃ bɔa, afɛ̃ kə le ɡʁɑ̃d pɛʁsɔn pɥis kɔ̃pʁɑ̃ːdʁ. ɛlz- ɔ̃ tuʒuʁ bəzwɛ̃ dɛksplikasjɔ̃. mɔ̃ desɛ̃ nymeʁo dø etɛ kɔm sa:
+%mɔ̃ desɛ̃ nə ʁəpʁezɑ̃tɛ pa ɛ̃ ʃapo. il ʁəpʁezɑ̃tɛ ɛ̃ sɛʁpɑ̃ bɔa ki diʒeʁɛ ɛ̃n- elefɑ̃. ʒe alɔʁ desine lɛ̃teʁjœʁ dy sɛʁpɑ̃ bɔa, afɛ̃ kə le ɡʁɑ̃d pɛʁsɔn pɥis kɔ̃pʁɑ̃ːdʁ. ɛlz- ɔ̃ tuʒuʁ bəzwɛ̃ dɛksplikasjɔ̃. mɔ̃ desɛ̃ nymeʁo dø etɛ kɔm sa:
 \maincol
 \incpic{pic/image3.png}
 \maincol
-Les grandes personnes m'ont conseillé\ft[conseiller]{v.t.}{to advise} de laisser de côté\ft[laiser qch. de côté]{}{to put something aside} les dessins de serpents boas ouverts ou fermés, et de m'intéresser\ft[se intéresser à]{v.pr.plus.prép}{to be interested in} plutôt\ft{adv.}{rather, instead} à la géographie, à l'histoire, au calcul et à la grammaire. C'est ainsi que j'ai abandonné, à l'âge de six ans, une magnifique carrière de peintre. J'avais été découragé par l'insuccès de mon dessin numéro 1 et de mon dessin numéro 2. Les grandes personnes ne comprennent jamais rien toutes seules, et c'est fatigant\ft{adj.}{tiring}, pour les enfants, de toujours leur donner des explications.
+Les grandes personnes m'ont conseillé\ft[conseiller]{v.t.}{to advise} de laisser de côté\ft[laiser qch. de côté]{}{to put something aside} les dessins de serpents boas ouverts ou fermés, et de m'intéresser plutôt\ft{adv.}{rather, instead} à la géographie, à l'histoire, au calcul et à la grammaire. C'est ainsi que j'ai abandonné, à l'âge de six ans, une magnifique carrière de peintre. J'avais été découragé par l'insuccès de mon dessin numéro 1 et de mon dessin numéro 2. Les grandes personnes ne comprennent jamais rien toutes seules, et c'est fatigant\ft{adj.}{tiring}, pour les enfants, de toujours leur donner des explications.
 \ipacol
-le ɡʁɑ̃d pɛʁsɔn mɔ̃ kɔ̃seje də lese də kote le desɛ̃ də sɛʁpɑ̃ bɔa uvɛʁ u fɛʁme, e də mɛ̃teʁese plyto a la ʒeɔɡʁafi, a listwaːʁ, o kalkyl e a la ɡʁamɛːʁ. sɛt- ɛ̃si kə ʒe abɑ̃dɔne, a laʒ də siz ɑ̃, yn maɲifik kaʁjɛʁ də pɛ̃tʁ. ʒavɛ ete dekuʁaʒe paʁ lɛ̃syksɛ də mɔ̃ desɛ̃ nymeʁo ɛ̃ e də mɔ̃ desɛ̃ nymeʁo dø. le ɡʁɑ̃d pɛʁsɔn nə kɔ̃pʁɛn ʒamɛ ʁjɛ̃ tut sœːl, e sɛ fatiɡɑ̃, puʁ lez- ɑ̃fɑ̃, də tuʒuʁ lœʁ dɔne dez- ɛksplikasjɔ̃.
+%le ɡʁɑ̃d pɛʁsɔn mɔ̃ kɔ̃seje də lese də kote le desɛ̃ də sɛʁpɑ̃ bɔa uvɛʁ u fɛʁme, e də mɛ̃teʁese plyto a la ʒeɔɡʁafi, a listwaːʁ, o kalkyl e a la ɡʁamɛːʁ. sɛt- ɛ̃si kə ʒe abɑ̃dɔne, a laʒ də siz ɑ̃, yn maɲifik kaʁjɛʁ də pɛ̃tʁ. ʒavɛ ete dekuʁaʒe paʁ lɛ̃syksɛ də mɔ̃ desɛ̃ nymeʁo ɛ̃ e də mɔ̃ desɛ̃ nymeʁo dø. le ɡʁɑ̃d pɛʁsɔn nə kɔ̃pʁɛn ʒamɛ ʁjɛ̃ tut sœːl, e sɛ fatiɡɑ̃, puʁ lez- ɑ̃fɑ̃, də tuʒuʁ lœʁ dɔne dez- ɛksplikasjɔ̃.
 \maincol
-J'ai donc dû\ft[devoir]{v.aux. Past.pas.}{has to, ought to, ...} choisir\ft{v.t.}{to choose} un autre métier\ft{n.m.}{job occupation} et j'ai appris\ft[apprendre]{v.t. Part.pas.}{learn} à piloter des avions. J'ai volé\ft[voler]{v.i. Part.pas.}{to fly} un peu\ft[un peu]{}{a little, a bit} partout\ft{adv.}{everywhere} dans le monde. Et la géographie, c'est exact, m'a beaucoup servi. Je savais\ft[ savoir]{v.t. Impar.}{to know how to, to be able to} reconnaître\ft{v.t.}{to recognize}, du premier coup d'œil\ft[coup d’œil]{n.m.}{look, glance}, la Chine de l'Arizona. C'est utile\ft{adj.}{useful}, si l'on est égaré\ft[égarer]{v.t.}{to lose, to mislead} pendant la nuit.
+J'ai donc dû choisir un autre métier et j'ai appris à piloter des avions. J'ai volé\ft[voler]{v.i. Part.pas.}{to fly} un peu\ft[un peu]{}{a little, a bit} partout\ft{adv.}{everywhere} dans le monde. Et la géographie, c'est exact, m'a beaucoup servi. Je savais reconnaître, du premier coup d'œil\ft[coup d’œil]{n.m.}{look, glance}, la Chine de l'Arizona. C'est utile, si l'on est égaré\ft[égarer]{v.t.}{to lose, to mislead} pendant la nuit.
 \ipacol
-ʒe dɔ̃k dy ʃwaziʁ ɛ̃n- otʁə metje e ʒe apʁi a pilɔte dez- avjɔ̃. ʒe vɔle ɛ̃ pø paʁtu dɑ̃ lə mɔ̃ːd. e la ʒeɔɡʁafi, sɛt- ɛɡzakt, ma boku sɛʁvi. ʒə savɛ ʁəkɔnɛtʁ, dy pʁəmje ku dœːj, la ʃin də laʁizɔna. sɛt- ytil, si lɔ̃n- ɛ eɡaʁe pɑ̃dɑ̃ la nɥi.
+%ʒe dɔ̃k dy ʃwaziʁ ɛ̃n- otʁə metje e ʒe apʁi a pilɔte dez- avjɔ̃. ʒe vɔle ɛ̃ pø paʁtu dɑ̃ lə mɔ̃ːd. e la ʒeɔɡʁafi, sɛt- ɛɡzakt, ma boku sɛʁvi. ʒə savɛ ʁəkɔnɛtʁ, dy pʁəmje ku dœːj, la ʃin də laʁizɔna. sɛt- ytil, si lɔ̃n- ɛ eɡaʁe pɑ̃dɑ̃ la nɥi.
 \maincol
-J'ai ansi eu, au cours\ft[]{m.n}{course} de ma vie, des tas de\ft[un tas de]{}{loads of} contacts avec des tas de gens sérieux. J'ai beaucoup vécu chez les grandes personnes. Je les ai vues de très près. Ça n'a pas trop amélioré mon opinion.
+J'ai ansi eu, au cours\ft[]{m.n}{course} de ma vie, des tas de\ft[un tas de]{}{loads of} contacts avec des tas de gens sérieux. J'ai beaucoup vécu chez les grandes personnes. Je les ai vues de très près. Ça n'a pas trop amélioré\ft[]{vt}{to improve} mon opinion.
 \ipacol
-ʒe ɑ̃si y, o kuʁ də ma vi, de ta də kɔ̃takt avɛk de ta də ʒɑ̃ seʁjø. ʒe boku veky ʃe le ɡʁɑ̃d pɛʁsɔn. ʒə lez- e vy də tʁɛ pʁɛ. sa na pa tʁo ameljɔʁe mɔ̃n- ɔpinjɔ̃.
+%ʒe ɑ̃si y, o kuʁ də ma vi, de ta də kɔ̃takt avɛk de ta də ʒɑ̃ seʁjø. ʒe boku veky ʃe le ɡʁɑ̃d pɛʁsɔn. ʒə lez- e vy də tʁɛ pʁɛ. sa na pa tʁo ameljɔʁe mɔ̃n- ɔpinjɔ̃.
 \maincol
-Quand j'en rencontrais\ft[rencontrer]{v.t. Impar.}{to meet} une qui me paraissait un peu lucide\ft[adj.]{lucid, clear headed}, je faisait l'expérience sur elle de mon dessin no.~1 que j'ai toujours conservé. Je voulais\ft[vouloir faire qch.]{v.t. Impar.}{to want to do sth.} savoir si elle était vraiment compréhensive. Mais toujours elle me répondait: «~C'est un chapeau.~» Alors je ne lui parlais ni de serpents boas, ni de forêts vierges, ni d'étoiles\ft{n.m.}{star}. Je me mettais\ft[mettre]{v.t. Impar.}{to put} à sa portée\ft{n.m.}{range, scope}. Je lui parlais de bridge, de golf, de politique et de cravates\ft{n.m.}{tie}. Et la grande personne était bien contente de connaître un homme aussi raisonnable.
+Quand j'en rencontrais\ft[rencontrer]{v.t. Impar.}{to meet} une qui me paraissait\ft[paraître]{v. Impar.}{to appear} un peu lucide, je faisait l'expérience sur elle de mon dessin no.~1 que j'ai toujours conservé. Je voulais savoir si elle était vraiment compréhensive. Mais toujours elle me répondait: «~C'est un chapeau.~» Alors je ne lui parlais ni de serpents boas, ni de forêts vierges, ni d'étoiles. Je me mettais\ft[mettre]{v.t. Impar.}{to put} à sa portée\ft{n.m.}{range, scope}. Je lui parlais de bridge, de golf, de politique et de cravates\ft{n.m.}{tie}. Et la grande personne était bien contente de connaître un homme aussi raisonnable.
 \ipacol
-kɑ̃ ʒɑ̃ ʁɑ̃kɔ̃tʁɛ yn ki mə paʁɛsɛ ɛ̃ pø lysid, ʒə fəzɛ lɛkspeʁjɑ̃s syʁ ɛl də mɔ̃ desɛ̃ nymero ɛ̃ kə ʒe tuʒuʁ kɔ̃sɛʁve. ʒə vulɛ savwaʁ si ɛl etɛ vʁɛmɑ̃ kɔ̃pʁeɑ̃siːv. mɛ tuʒuʁ ɛl mə ʁepɔ̃dɛ: «~sɛt- ɛ̃ ʃapo.~» alɔʁ ʒə nə lɥi paʁlɛ ni də sɛʁpɑ̃ bɔa, ni də fɔʁɛ vjɛːʁʒ, ni detwal. ʒə mə mɛtɛ a sa pɔʁte. ʒə lɥi paʁlɛ də bʁidʒ, də ɡɔlf, də pɔlitik e də kʁavat. e la ɡʁɑ̃d pɛʁsɔn etɛ bjɛ̃ kɔ̃tɑ̃t də kɔnɛtʁ ɛ̃n- ɔm osi ʁɛzɔnabl.
+%kɑ̃ ʒɑ̃ ʁɑ̃kɔ̃tʁɛ yn ki mə paʁɛsɛ ɛ̃ pø lysid, ʒə fəzɛ lɛkspeʁjɑ̃s syʁ ɛl də mɔ̃ desɛ̃ nymero ɛ̃ kə ʒe tuʒuʁ kɔ̃sɛʁve. ʒə vulɛ savwaʁ si ɛl etɛ vʁɛmɑ̃ kɔ̃pʁeɑ̃siːv. mɛ tuʒuʁ ɛl mə ʁepɔ̃dɛ: «~sɛt- ɛ̃ ʃapo.~» alɔʁ ʒə nə lɥi paʁlɛ ni də sɛʁpɑ̃ bɔa, ni də fɔʁɛ vjɛːʁʒ, ni detwal. ʒə mə mɛtɛ a sa pɔʁte. ʒə lɥi paʁlɛ də bʁidʒ, də ɡɔlf, də pɔlitik e də kʁavat. e la ɡʁɑ̃d pɛʁsɔn etɛ bjɛ̃ kɔ̃tɑ̃t də kɔnɛtʁ ɛ̃n- ɔm osi ʁɛzɔnabl.
 \maincol
 
 \parachapter[II]{} %Le Chapitre II
 \maincol
 J'ai ainsi\ft{adv.}{so, thus} vécu seul, sans personne avec qui parler véritablement, jusqu'à une panne\ft{n.m.}{breakdown} dans le désert du Sahara, il y a six ans. Quelque chose s'était cassé\ft[casser]{v.pr.i.}{to break} dans mon moteur, et comme je n'avais avec moi ni méchanicien, ni passagers, je me préparai\ft[se préparer à]{v.pr.+prép.}{to be about to} à essayer\ft[essayer de faire]{}{try to do} de réussir, tout seul, une réparation difficile. C'était pour moi une question de vie ou de mort. J'avais à peine\ft[à peine]{loc.adv.}{barely} de l'eau à boire\ft{v.}{to drink} pour huit jours.
 \ipacol
-ʒe ɛ̃si veky sœːl, sɑ̃ pɛʁsɔn avɛk ki paʁle veʁitabləmɑ̃, ʒyska yn pan dɑ̃ lə dezɛʁ dy saaʁa, il j- a siz ɑ̃. kɛlkə ʃoz setɛ kase dɑ̃ mɔ̃ mɔtœːʁ, e kɔm ʒə navɛ avɛk mwa ni meʃanisjɛ̃, ni pasaʒe, ʒə mə pʁepaʁe a eseje də ʁeysiːʁ, tu sœːl, yn ʁepaʁasjɔ̃ difisil. setɛ puʁ mwa yn kɛstjɔ̃ də vi u də mɔːʁ. ʒavɛ a pɛn də lo a bwaʁ puʁ ɥi ʒuːʁ.
+%ʒe ɛ̃si veky sœːl, sɑ̃ pɛʁsɔn avɛk ki paʁle veʁitabləmɑ̃, ʒyska yn pan dɑ̃ lə dezɛʁ dy saaʁa, il j- a siz ɑ̃. kɛlkə ʃoz setɛ kase dɑ̃ mɔ̃ mɔtœːʁ, e kɔm ʒə navɛ avɛk mwa ni meʃanisjɛ̃, ni pasaʒe, ʒə mə pʁepaʁe a eseje də ʁeysiːʁ, tu sœːl, yn ʁepaʁasjɔ̃ difisil. setɛ puʁ mwa yn kɛstjɔ̃ də vi u də mɔːʁ. ʒavɛ a pɛn də lo a bwaʁ puʁ ɥi ʒuːʁ.
 \maincol
-Le premier soir je me suis donc endormi sur le sable\ft{n.m.}{sand} à mille milles de toute terre habitée. J'étais bien plus isolé qu'un naufragé\ft[]{adj.}{shipwrecked} sur un rideau\ft{n.m.}{curtain, hanging, rag} au milieu\ft{n.m.}{center, middle} de l'océan. Alors vous imaginez ma surprise, au levé du jour\ft[le lever du jour]{}{day break, dawn}, quand une drôle\ft[]{adj.}{funny} de petite voix\ft{n.f.}{voice} m'a réveillé\ft[réveiller]{v.t.}{to wake up}. Elle disait:
+Le premier soir je me suis donc endormi sur le sable\ft{n.m.}{sand} à mille milles de toute terre habitée. J'étais bien plus isolé qu'un naufragé\ft[]{n.m}{shipwreck victim} sur un rideau\ft{n.m.}{curtain, hanging, rag} au milieu\ft{n.m.}{center, middle} de l'océan. Alors vous imaginez ma surprise, au levé du jour\ft[le lever du jour]{}{day break, dawn}, quand une drôle de petite voix\ft{n.f.}{voice} m'a réveillé\ft[réveiller]{v.t.}{to wake up}. Elle disait:
 \ipacol
-lə pʁəmje swaʁ ʒə mə sɥi dɔ̃k ɑ̃dɔʁmi syʁ lə sabl a mil mil də tut tɛʁ abite. ʒetɛ bjɛ̃ ply izɔle kɛ̃ nofʁaʒe syʁ ɛ̃ ʁido o miljø də lɔseɑ̃. alɔʁ vuz- imaʒine ma syʁpʁiːz, o ləve dy ʒuːʁ, kɑ̃ yn dʁol də pətit vwa ma ʁeveje. ɛl dizɛ:
+%lə pʁəmje swaʁ ʒə mə sɥi dɔ̃k ɑ̃dɔʁmi syʁ lə sabl a mil mil də tut tɛʁ abite. ʒetɛ bjɛ̃ ply izɔle kɛ̃ nofʁaʒe syʁ ɛ̃ ʁido o miljø də lɔseɑ̃. alɔʁ vuz- imaʒine ma syʁpʁiːz, o ləve dy ʒuːʁ, kɑ̃ yn dʁol də pətit vwa ma ʁeveje. ɛl dizɛ:
 \maincol
 -S'il vous plaît... dessine-moi un mouton!
 \ipacol
--sil vu plɛ... desin-mwa ɛ̃ mutɔ̃!
+%-sil vu plɛ... desin-mwa ɛ̃ mutɔ̃!
 \maincol
 -Hein!
 \ipacol
--ɛ̃!
+%-ɛ̃!
 \maincol
 -Dessine-moi un mouton...
 \ipacol
--desin-mwa ɛ̃ mutɔ̃...
+%-desin-mwa ɛ̃ mutɔ̃...
 \maincol
-J'ai sauté\ft[souter]{v.t.}{to jump, to spring up} sur mes pieds\ft{n.m.}{foot} comme si j'avais été frappé\ft[frapper]{n.t}{to hit, to strike} par la foudre\ft[]{n.m.}{thunderbolt}. J'ai bien frotté\ft[frotter]{v.t.}{to rub} mes yeux. J'ai bien regardé. Et j'ai vu un petit bonhomme tout à fait\ft[tout à fait]{loc.adv.}{quite, fully, absolutely} extraordinaire qui me considérait\ft[considérer]{v.t. Impar.}{to gaze, to stare at} gravement. Voilà le meilleur portrait que, plus tard, j'ai réussi à faire de lui. Mais mon dessin, bien sûr, est beaucoup moins ravissant\ft{adj.}{gorgeous, beautiful} que le modèle. Ce n'est pas de ma faute.
+J'ai sauté\ft[souter]{v.t.}{to jump, to spring up} sur mes pieds\ft{n.m.}{foot} comme si j'avais été frappé\ft[frapper]{n.t}{to hit, to strike} par la foudre\ft[]{n.m.}{thunderbolt}. J'ai bien frotté\ft[frotter]{v.t.}{to rub} mes yeux. J'ai bien regardé. Et j'ai vu un petit bonhomme tout à fait extraordinaire qui me considérait\ft[considérer]{v.t. Impar.}{to gaze, to stare at} gravement. Voilà le meilleur portrait que, plus tard, j'ai réussi à faire de lui. Mais mon dessin, bien sûr, est beaucoup moins ravissant\ft{adj.}{gorgeous, beautiful} que le modèle. Ce n'est pas de ma faute.
 \ipacol
-ʒe sote syʁ me pje kɔm si ʒavɛ ete fʁape paʁ la fudʁ. ʒe bjɛ̃ fʁɔte mez- jø. ʒe bjɛ̃ ʁəɡaʁde. e ʒe vy ɛ̃ pəti bɔnɔm tu a fɛ ɛkstʁaɔʁdinɛʁ ki mə kɔ̃sideʁɛ ɡʁavmɑ̃. vwala lə mɛjœʁ pɔʁtʁɛ kə, ply taːʁ, ʒe ʁeysi a fɛʁ də lɥi. mɛ mɔ̃ desɛ̃, bjɛ̃ syːʁ, ɛ boku mwɛ̃ ʁavisɑ̃ kə lə mɔdɛl. sə nɛ pa də ma foːt.
+%ʒe sote syʁ me pje kɔm si ʒavɛ ete fʁape paʁ la fudʁ. ʒe bjɛ̃ fʁɔte mez- jø. ʒe bjɛ̃ ʁəɡaʁde. e ʒe vy ɛ̃ pəti bɔnɔm tu a fɛ ɛkstʁaɔʁdinɛʁ ki mə kɔ̃sideʁɛ ɡʁavmɑ̃. vwala lə mɛjœʁ pɔʁtʁɛ kə, ply taːʁ, ʒe ʁeysi a fɛʁ də lɥi. mɛ mɔ̃ desɛ̃, bjɛ̃ syːʁ, ɛ boku mwɛ̃ ʁavisɑ̃ kə lə mɔdɛl. sə nɛ pa də ma foːt.
 \maincol
 J'avais été découragé dans ma carrière de peintre par les grandes personnes, à l'age de six ans, et je n'avais rien appris à dessiner, sauf\ft{prép.}{except, apart from, save} les boas fermés et les boas ouverts.
 \ipacol
-ʒavɛ ete dekuʁaʒe dɑ̃ ma kaʁjɛʁ də pɛ̃tʁə paʁ le ɡʁɑ̃d pɛʁsɔn, a laʒ də siz ɑ̃, e ʒə navɛ ʁjɛ̃ apʁi a desine, sof le bɔa fɛʁme e le bɔa uvɛːʁ.
+%ʒavɛ ete dekuʁaʒe dɑ̃ ma kaʁjɛʁ də pɛ̃tʁə paʁ le ɡʁɑ̃d pɛʁsɔn, a laʒ də siz ɑ̃, e ʒə navɛ ʁjɛ̃ apʁi a desine, sof le bɔa fɛʁme e le bɔa uvɛːʁ.
 \maincol
 \incpic{pic/image4.jpeg}
 \maincol
-Je regardai donc cette apparition\ft{n.f.}{arrivale, (first) appearance} avec des yeux tout ronds\ft{adj.}{round} d'étonnement\ft{n.m.}{surprise, astonishment}. N'oubliez\ft[oublier]{v.t. 2 p.p. Prés.}{to forget} pas que je me trouvais\ft[se trouver]{v.pr.i.}{to be, to be located} à mille milles de toute région habitée. Or mon petit bonhomme ne me semblait ni égaré\ft{adj.}{lost}, ni mort de fatigue, ni mort de faim, ni mort de soif\ft{n.f.}{thirst}, ni mort de peur\ft{n.f.}{fear}. Il n'avait en rien\ft[en rien]{lov.adv.}{nothing, not at all} l'apparence d'un enfant perdu\ft{adj.}{lost} au milieu du désert, à mille milles de toute région habitée. Quand je réussis enfin de parler, je lui dis:
+Je regardai donc cette apparition\ft{n.f.}{arrivale, (first) appearance} avec des yeux tout ronds\ft{adj.}{round} d'étonnement\ft{n.m.}{surprise, astonishment}. N'oubliez pas que je me trouvais\ft[se trouver]{v.pr.i.}{to be, to be located} à mille milles de toute région habitée. Or mon petit bonhomme ne me semblait ni égaré\ft{adj.}{lost}, ni mort de fatigue, ni mort de faim, ni mort de soif, ni mort de peur. Il n'avait en rien\ft[en rien]{lov.adv.}{nothing, not at all} l'apparence d'un enfant perdu\ft{adj.}{lost} au milieu du désert, à mille milles de toute région habitée. Quand je réussis enfin de parler, je lui dis:
 \ipacol
-ʒə ʁəɡaʁde dɔ̃k sɛt apaʁisjɔ̃ avɛk dez- jø tu ʁɔ̃ detɔnmɑ̃. nublije pa kə ʒə mə tʁuvɛ a mil mil də tut ʁeʒjɔ̃ abite. ɔʁ mɔ̃ pəti bɔnɔm nə mə sɑ̃blɛ ni eɡaʁe, ni mɔʁ də fatiɡ, ni mɔʁ də fɛ̃, ni mɔʁ də swaf, ni mɔʁ də pœːʁ. il navɛ ɑ̃ ʁjɛ̃ lapaʁɑ̃s dɛ̃n- ɑ̃fɑ̃ pɛʁdy o miljø dy dezɛːʁ, a mil mil də tut ʁeʒjɔ̃ abite. kɑ̃ ʒə ʁeysi ɑ̃fɛ̃ də paʁle, ʒə lɥi di:
+%ʒə ʁəɡaʁde dɔ̃k sɛt apaʁisjɔ̃ avɛk dez- jø tu ʁɔ̃ detɔnmɑ̃. nublije pa kə ʒə mə tʁuvɛ a mil mil də tut ʁeʒjɔ̃ abite. ɔʁ mɔ̃ pəti bɔnɔm nə mə sɑ̃blɛ ni eɡaʁe, ni mɔʁ də fatiɡ, ni mɔʁ də fɛ̃, ni mɔʁ də swaf, ni mɔʁ də pœːʁ. il navɛ ɑ̃ ʁjɛ̃ lapaʁɑ̃s dɛ̃n- ɑ̃fɑ̃ pɛʁdy o miljø dy dezɛːʁ, a mil mil də tut ʁeʒjɔ̃ abite. kɑ̃ ʒə ʁeysi ɑ̃fɛ̃ də paʁle, ʒə lɥi di:
 \maincol
--Mais qu'est-ce que tu fais\ft[faire]{v. 2 p.p. Prés.}{} là?
+-Mais qu'est-ce que tu fais là?
 \ipacol
--mɛ kɛ-s kə ty fɛ la?
+%-mɛ kɛ-s kə ty fɛ la?
 \maincol
-Et il me répéta alors, tout doucement\ft[ doucement]{adv.}{gently}, comme une chose très sérieuse:
+Et il me répéta alors, tout doucement\ft[]{adv.}{gently}, comme une chose très sérieuse:
 \ipacol
-e il mə ʁepeta alɔːʁ, tu dusmɑ̃, kɔm yn ʃoz tʁɛ seʁjøːz:
+%e il mə ʁepeta alɔːʁ, tu dusmɑ̃, kɔm yn ʃoz tʁɛ seʁjøːz:
 \maincol
 -S'il vous plaît... dessine-moi un mouton...
 \ipacol
--sil vu plɛ... desin-mwa ɛ̃ mutɔ̃...
+%-sil vu plɛ... desin-mwa ɛ̃ mutɔ̃...
 \maincol
-Quand le mystère est trop impressionnant\ft[impressionnant]{adj.}{impressive, stunning}, on n'ose\ft[oser fair qch.]{v.t. 3 p.p. Prés.}{to dare to do sth.} pas désobéir. Aussi absurde que cela me semblât à mille milles de tous les endroits\ft[endroit]{n.m.}{place} habités et en danger de mort, je sortis\ft[sortis]{v.t. 1 p.p. Pas.}{to take out} de ma poche une feuille\ft[feuille]{n.m.}{sheet} de papier et un stylographe. Mais je me rappelai\ft[se rappaler]{v.pr.t}{to remember} alors que j'avais surtout étudié la géographie, l'histoire, le calcul et la grammaire et je dis au petit bonhomme (avec un peu de mauvaise humeur) que je ne savais pas dessiner. Il me répondit:
+Quand le mystère est trop impressionnant, on n'ose\ft[oser fair qch.]{v.t. 3 p.p. Prés.}{to dare to do sth.} pas désobéir\ft[]{v.i}{disobey}. Aussi absurde que cela me semblât à mille milles de tous les endroits\ft[endroit]{n.m.}{place} habités et en danger de mort, je sortis\ft[sortis]{v.t. 1 p.p. Pas.}{to take out} de ma poche une feuille\ft[feuille]{n.m.}{sheet} de papier et un stylographe. Mais je me rappelai\ft[se rappaler]{v.pr.t}{to remember} alors que j'avais surtout étudié la géographie, l'histoire, le calcul et la grammaire et je dis au petit bonhomme (avec un peu de mauvaise humeur) que je ne savais pas dessiner. Il me répondit:
 \ipacol
-kɑ̃ lə mistɛʁ ɛ tʁo ɛ̃pʁesjɔnɑ̃, ɔ̃ noz pa dezɔbeiːʁ. osi apsyʁdə kə səla mə sɑ̃bla a mil mil də tu lez- ɑ̃dʁwa abite e ɑ̃ dɑ̃ʒe də mɔːʁ, ʒə sɔʁti də ma pɔʃ yn fœj də papje e ɛ̃ stilɔɡʁaf. mɛ ʒə mə ʁaple alɔʁ kə ʒavɛ syʁtu etydje la ʒeɔɡʁafi, listwaːʁ, lə kalkyl e la ɡʁamɛʁ e ʒə di o pəti bɔnɔm (avɛk ɛ̃ pø də movɛz ymœːʁ) kə ʒə nə savɛ pa desine. il mə ʁepɔ̃di:
+%kɑ̃ lə mistɛʁ ɛ tʁo ɛ̃pʁesjɔnɑ̃, ɔ̃ noz pa dezɔbeiːʁ. osi apsyʁdə kə səla mə sɑ̃bla a mil mil də tu lez- ɑ̃dʁwa abite e ɑ̃ dɑ̃ʒe də mɔːʁ, ʒə sɔʁti də ma pɔʃ yn fœj də papje e ɛ̃ stilɔɡʁaf. mɛ ʒə mə ʁaple alɔʁ kə ʒavɛ syʁtu etydje la ʒeɔɡʁafi, listwaːʁ, lə kalkyl e la ɡʁamɛʁ e ʒə di o pəti bɔnɔm (avɛk ɛ̃ pø də movɛz ymœːʁ) kə ʒə nə savɛ pa desine. il mə ʁepɔ̃di:
 \maincol
 -Ça ne fait rien. Dessine-moi un mouton.
 \ipacol
--sa nə fɛ ʁjɛ̃. desin-mwa ɛ̃ mutɔ̃.
+%-sa nə fɛ ʁjɛ̃. desin-mwa ɛ̃ mutɔ̃.
 \maincol
-Comme je n'avais jamais dessiné un mouton je refis\ft[refaire]{v.t. 1 p.p. Pas.}{to redo}, pour, un des deux seuls dessins dont\ft[dont]{pron.rel.}{whose, of which} j'étais capable. Celui du boa fermé. Et je fus stupéfait\ft[stupéfait]{adj.}{astounded, stunned, stupefied} d'entendre\ft[entendre]{v.t.}{to hear} le petit bonhomme me répondre:
+Comme je n'avais jamais dessiné un mouton je refis\ft[refaire]{v.t. 1 p.p. Pas.}{to redo}, pour, un des deux seuls dessins dont\ft[dont]{pron.rel.}{whose, of which} j'étais capable. Celui du boa fermé. Et je fus stupéfait d'entendre le petit bonhomme me répondre:
 \ipacol
-kɔm ʒə navɛ ʒamɛ desine ɛ̃ mutɔ̃ ʒə ʁəfi, puːʁ, ɛ̃ de dø sœl desɛ̃ dɔ̃ ʒetɛ kapabl. səlɥi dy bɔa fɛʁme. e ʒə fy stypefɛ dɑ̃tɑ̃dʁə lə pəti bɔnɔm mə ʁepɔ̃ːdʁ:
+%kɔm ʒə navɛ ʒamɛ desine ɛ̃ mutɔ̃ ʒə ʁəfi, puːʁ, ɛ̃ de dø sœl desɛ̃ dɔ̃ ʒetɛ kapabl. səlɥi dy bɔa fɛʁme. e ʒə fy stypefɛ dɑ̃tɑ̃dʁə lə pəti bɔnɔm mə ʁepɔ̃ːdʁ:
 \maincol
 -Non! Non! Je ne veux pas d'un éléphant dans un boa. Un boa c'est très dangereux, et un éléphant c'est très encombrant\ft[encombrant]{adj.}{bulky, cumbersome}. Chez moi c'est tout petit. J'ai besoin d'un mouton. Dessine-moi un mouton.
 \ipacol
--nɔ̃! nɔ̃! ʒə nə vø pa dɛ̃n- elefɑ̃ dɑ̃ ɛ̃ bɔa. ɛ̃ bɔa sɛ tʁɛ dɑ̃ʒʁø, e ɛ̃n- elefɑ̃ sɛ tʁɛz- ɑ̃kɔ̃bʁɑ̃. ʃe mwa sɛ tu pəti. ʒe bəzwɛ̃ dɛ̃ mutɔ̃. desin-mwa ɛ̃ mutɔ̃.
+%-nɔ̃! nɔ̃! ʒə nə vø pa dɛ̃n- elefɑ̃ dɑ̃ ɛ̃ bɔa. ɛ̃ bɔa sɛ tʁɛ dɑ̃ʒʁø, e ɛ̃n- elefɑ̃ sɛ tʁɛz- ɑ̃kɔ̃bʁɑ̃. ʃe mwa sɛ tu pəti. ʒe bəzwɛ̃ dɛ̃ mutɔ̃. desin-mwa ɛ̃ mutɔ̃.
 \maincol
 Alors j'ai dessiné.
 \ipacol
-alɔʁ ʒe desine.
+%alɔʁ ʒe desine.
 \maincol
 \incpic{pic/image5.jpeg}
 
@@ -206,7 +212,7 @@ Je refis donc encore mon dessin:
 
 Mais il fut refusé, comme les précédents\ft[précédent]{adj.}{previous}:
 
--Celui-là est trop vieux\ft[vieux]{adj.}{old}. Je veux un mouton qui vive longtemps.
+-Celui-là est trop vieux. Je veux un mouton qui vive longtemps.
 
 Alors, faute de\ft[faute de]{loc.prép.}{for want of, for lack of} patience, comme j'avais hâte\ft[hâter]{v.t.}{to speed up, to hasten} de commencer le démontage\ft[démontage]{n.m.}{dismantling, taking to pieces} de mon moteur, je griffonnai\ft[griffonner]{v.t.}{to scribble (down), to sketch roughly, to do a quick sketch of} ce dessin-ci.
 
@@ -214,56 +220,56 @@ Alors, faute de\ft[faute de]{loc.prép.}{for want of, for lack of} patience, com
 
 Et je lançai\ft[lancer]{v.t.}{to throw}:
 
--Ca c'est la caisse\ft[caisse]{n.f.}{box, case, chest}. Le mouton que tu veux est dedans\ft[dedans]{adv.}{inside}.
+-Ça c'est la caisse\ft[caisse]{n.f.}{box, case, chest}. Le mouton que tu veux est dedans\ft[dedans]{adv.}{inside}.
 
-Mais je fus bien surpris de voir s'illuminer\ft[illuminer]{v.pr.i}{to light up} le visage\ft[visage]{n.m.}{face} de mon jeune juge\ft[juge]{n.m.}{judge}:
+Mais je fus bien surpris de voir s'illuminer\ft[illuminer]{v.pr.i}{to light up} le visage\ft[visage]{n.m.}{face} de mon jeune juge:
 
--C'est tout à fait comme ça que je le voulais! Crois\ft[crois]{v.t. 2 p.s. Prés}{to believe}-tu qu'il faille\ft[falloir]{v.imp. 3 p.s. Prés.subj.}{[exprime le besoin]} beaucoup d'herbe à ce mouton?
+-C'est tout à fait comme ça que je le voulais! Crois-tu qu'il faille beaucoup d'herbe à ce mouton?
 
 -Pourquoi?
 
 -Parce que chez moi c'est tout petit...
 
--Ca suffira\ft[suffire]{v.t. 3 p.s. Fut.}{to be enough, to be sufficient, to suffice} sûrement. Je t'ai donné un tout petit mouton.
+-Ça suffira sûrement. Je t'ai donné un tout petit mouton.
 
-Il pencha\ft[pencher]{v.t.}{to tilt, to tip up} la tête\ft[tête]{n.m.}{head} vers le dessin:
+Il pencha\ft[pencher]{v.t.}{to tilt, to tip up} la tête vers le dessin:
 
 -Pas si petit que ça... Tiens! Il s'est endormi...
 
 Et c'est ainsi que je fis la connaissance du petit prince.
 
 \parachapter[III]{} %Le Chapitre III
-Il me fallut longtemps pour comprendre d'où il venait. Le petit prince, qui me posait\ft[poser]{v.t.}{to put, to lay, to place} beaucoup de questions, ne semblait jamais entendre\ft[entendre]{v.t.}{to hear} les miennes\ft[les miennes]{}{mine}. Ce sont des mots\ft[mot]{n.m.}{word} prononcés\ft[prononcé]{adj.}{pronounced, strongly marked} par hasard\ft[par hasard]{loc.adv.}{by chance, by accident} qui, peu à peu, m'ont tout révélé. Ainsi, quand il aperçu\ft[aperçu]{v.t.}{m.s. Part.pas. (apercevoir) to glimpse, to catch sight of} pour la première fois mon avion (je ne dessinerai pas mon avion, c'est un dessin beaucoup trop compliqué pour moi) il me demanda:
+Il me fallut longtemps pour comprendre d'où il venait. Le petit prince, qui me posait\ft[poser]{v.t.}{to put, to lay, to place} beaucoup de questions, ne semblait jamais entendre les miennes. Ce sont des mots\ft[mot]{n.m.}{word} prononcés\ft[prononcé]{adj.}{pronounced, strongly marked} par hasard\ft[par hasard]{loc.adv.}{by chance, by accident} qui, peu à peu, m'ont tout révélé. Ainsi, quand il aperçu\ft[aperçu]{v.t.}{m.s. Part.pas. (apercevoir) to glimpse, to catch sight of} pour la première fois mon avion (je ne dessinerai pas mon avion, c'est un dessin beaucoup trop compliqué pour moi) il me demanda:
 
 -Qu'est ce que c'est que cette chose-là?
 
--Ce n'est pas une chose. Ca vole\ft[voler]{v.i.}{to fly}. C'est un avion. C'est mon avion.
+-Ce n'est pas une chose. Ça vole. C'est un avion. C'est mon avion.
 
-Et j'étais fier\ft[fier]{adj.}{proud} de lui apprendre que je volais. Alors il s'écria\ft[écrier]{v.pr.i.}{to cry, to shout, to exlaim}:
+Et j'étais fier\ft[fier]{adj.}{proud} de lui apprendre que je volais. Alors il s'écria:
 
 -Comment! tu es tombé\ft[tomber]{v.i.}{to fall (down), to fall over} du ciel!
 
--Oui, fis-je modestement\ft[modestement]{adv.}{modestly, simply}.
+-Oui, fis-je modestement.
 
 -Ah! ça c'est drôle...
 
-Et le petit prince eut un très joli\ft[joli]{adj.}{pretty, lovely, nice} éclat de rire\ft[éclat de rire]{burst}{or roar of laughter} qui m'irrita beaucoup. Je désire que l'on prenne mes malheurs\ft[malheurs]{n.m.}{misfortune} au sérieux. Puis il ajouta\ft[ajouter]{v.t.}{to add}:
+Et le petit prince eut un très joli éclat de rire\ft[éclat de rire]{burst}{or roar of laughter} qui m'irrita beaucoup. Je désire que l'on prenne mes malheurs au sérieux. Puis il ajouta:
 
 -Alors, toi aussi tu viens du ciel! De quelle planète es-tu?
 
-J'entrevis\ft[entrevoir]{v.t. 1 p.s. Pas.}{to catch sight, a glimpse of} aussitôt\ft[aussitôt]{adv.}{immediately} une lueur\ft[lueur]{n.f.}{glow, light, gleam}, dans le mystère de sa présence, et j'interrogeai\ft[interroger]{v.t.}{to ask, to question} brusquement\ft[brusquement]{adv.}{suddenly}:
+J'entrevis\ft[entrevoir]{v.t. 1 p.s. Pas.}{to catch sight, a glimpse of} aussitôt\ft[aussitôt]{adv.}{immediately} une lueur\ft[lueur]{n.f.}{glow, light, gleam}, dans le mystère de sa présence, et j'interrogeai brusquement:
 
 -Tu viens donc d'une autre planète?
 
 Mais il ne me répondit pas. Il hochait\ft[hocher la tête]{to}{nod} la tête doucement tout en regardant mon avion:
 
--C'est vrai que, là-dessus\ft[là-dessus]{adv.}{to here}, tu ne peux pas venir de bien loin\ft[loin]{adv.}{far (away)}...
+-C'est vrai que, là-dessus, tu ne peux pas venir de bien loin...
 
 \incpic{pic/image9.jpeg}
 
-Et il s'enfonça\ft[s'enfoncer dans]{to}{sink into, to disappear into} dans une rêverie\ft[rêverie]{n.f.}{day dreaming} qui dura\ft[durer]{v.i.}{to last} longtemps. Puis, sortant\ft[sortant]{v.t.}{Par.prés. (sortir) to take out} mon mouton de sa poche, il se plongea\ft[se plonger dans]{v.pr.+prép.}{to sink into} dans la contemplation de son trésor\ft[trésor]{n.m.}{treasure}.
+Et il s'enfonça\ft[s'enfoncer dans]{to}{sink into, to disappear into} dans une rêverie\ft[rêverie]{n.f.}{day dreaming} qui dura longtemps. Puis, sortant\ft[sortant]{v.t.}{Par.prés. (sortir) to take out} mon mouton de sa poche, il se plongea\ft[se plonger dans]{v.pr.+prép.}{to sink into} dans la contemplation\ft[]{n.f}{meditation} de son trésor\ft[trésor]{n.m.}{treasure}.
 
-Vous imaginez combien j'avais pu être intrigué\ft[intriguer]{v.t.}{to intrigue, to puzzle} par cette demi-confidence sur «~les autres planètes~». Je m'efforçai\ft[s'efforcer de faire qch.]{to}{make effort to do sth. } donc d'en savoir plus long:
+Vous imaginez combien j'avais pu être intrigué\ft[intriguer]{v.t.}{to intrigue, to puzzle} par cette demi-confidence sur «~les autres planètes~». Je m'efforçai\ft[s'efforcer de faire qch.]{}{make effort to do sth. } donc d'en savoir plus long:
 
 -D'où viens-tu mon petit bonhomme? Où est-ce «~chez toi~»? Où veux-tu emporter\ft[emporter]{v.t.}{to take} mon mouton?
 
@@ -277,7 +283,7 @@ La proposition\ft[proposition]{n.f.}{suggestion} parut\ft[paraître]{v.i. 3 p.s.
 
 -L'attacher? Quelle drôle d'idée!
 
--Mais si tu ne l'attaches pas, il ira\ft[aller]{v. 3 p.s. Fut.}{} n'importe\ft[n'importe où]{loc.adv.}{anywhere} où, et il se perdra\ft[perdra]{v.pr.i.}{3 p.s. Fut. to lost}...
+-Mais si tu ne l'attaches pas, il ira n'importe où, et il se perdra\ft[perdra]{v.pr.i.}{3 p.s. Fut. to lost}...
 
 Et mon ami eut un nouvel éclat de rire:
 
@@ -285,22 +291,25 @@ Et mon ami eut un nouvel éclat de rire:
 
 -N'importe où. Droit devant lui... 
 
-Alors le petit prince remarqua\ft[remarquer]{v.t.}{to notice} gravement:
+Alors le petit prince remarqua\ft[remarquer]{v.t.}{to remark} gravement:
 
--Ca ne fait rien, c'est tellement petit, chez moi! 
+-Ça ne fait rien, c'est tellement petit, chez moi! 
 
-Et, avec un peu de mélancolie\ft[mélancolie]{n.f.}{melancholy}, peut-être, il ajouta: 
+Et, avec un peu de mélancolie, peut-être, il ajouta: 
 
 -Droit devant soi on ne peut pas aller bien loin...
 
 \parachapter{IV} %Le Chapitre IV
 J'avais ainsi appris une seconde chose très importante: C'est que sa planète d'origine était à peine\ft[à peine]{loc.adv.}{hardly, barely, scarely} plus grande qu'une maison!
 
-Ca ne pouvait pas m'étonner\ft[étonner]{v.t.}{to amaze, to surprise} beaucoup. Je savais bien qu'en dehors\ft[en dehors]{loc.adv.}{outside} des grosses\ft[gros]{adj.}{large, big} planètes comme la Terre, Jupiter, Mars, Vénus, auxquelles on a donné des noms, il y en a des centaines\ft[centaine]{n.f.}{hundred} d'autres qui sont quelque-fois si petites qu'on a beaucoup de mal à les apercevoir au téléscope. Quand un astronome découvre l'une d'elles, il lui donne pour nom un zéro. Il l'appelle par example: «~l'astéroide 3251.~»
+Ça ne pouvait pas m'étonner\ft[étonner]{v.t.}{to amaze, to surprise} beaucoup. Je savais bien qu'en dehors\ft[en dehors]{loc.adv.}{outside} des grosses\ft[gros]{adj.}{large, big} planètes comme la Terre, Jupiter, Mars, Vénus, auxquelles on a donné des noms, il y en a des centaines\ft[centaine]{n.f.}{hundred} d'autres qui sont quelque-fois si petites qu'on a beaucoup de mal à les apercevoir au télescope. Quand un astronome découvre l'une d'elles, il lui donne pour nom un zéro. Il l'appelle par exemple: «~l'astéroïde 3251.~»
+% trois-mille-deux-cent-cinquante-et-un
 
-J'ai de sérieuses raisons de croire que la planète d'où venait le petit prince est l'astéroide B 612.
+J'ai de sérieuses raisons de croire que la planète d'où venait le petit prince est l'astéroïde B 612.
+% six-cent-douze
 
-Cet astéroide n'a été aperçu qu'une fois au télescope, en 1909, par un astronome turc.
+Cet astéroïde n'a été aperçu qu'une fois au télescope, en 1909, par un astronome turc.
+% mille-neuf-cent-neuf
 
 \incpic{pic/image10.jpeg}
 
@@ -310,27 +319,28 @@ Mais personne ne l'avait cru à cause de son costume. Les grandes personnes sont
 
 \incpic{pic/image11.jpeg}
 
-Heureusement\ft[herersement]{adv.}{luckily}, pour la réputation de l'astéroide B 612 un dictateur turc imposa à son peuple, sous peine de mort, de s'habiller\ft[s'habiller]{v.pr.}{to get dressed, to dress} à l'Européenne. L'astronome refit se démonstration en 1920, dans un habit\ft[habit]{n.m.}{costume, outfit} très élégant. Et cette fois-ci tout le monde fut de son avis.
+Heureusement, pour la réputation de l'astéroïde B 612 un dictateur turc imposa à son peuple, sous peine de mort, de s'habiller\ft[s'habiller]{v.pr.}{to get dressed, to dress} à l'Européenne. L'astronome refit se démonstration en 1920, dans un habit\ft[habit]{n.m.}{costume, outfit} très élégant. Et cette fois-ci tout le monde fut de son avis.
+% mille-neuf-cent-vingt
 
 \incpic{pic/image12.jpeg}
 
-Si je vous ai raconté\ft[raconter]{v.t.}{to tell} ces détails sur l'astéroide B 612 et si je vous ai confié son numéro, c'est à cause des grandes personnes. Les grandes personnes aiment les chiffres. Quand vous leur parlez d'un nouvel ami, elles ne vous questionnent jamais sur l'essentiel. Elles ne vous disent jamais: «~Quel est le son\ft[son]{n.m.}{sound} de sa voix? Quels sont les jeux\ft[jeu]{n.m.}{game} qu'il préfère? Est-ce qu'il collectionne les papillons\ft[papillon]{n.m.}{butterfly}?~» Elles vous demandent: «~Quel âge a-t-il? Combien a-t-il de frères? Combien pèse\ft[péser]{v.i.}{to weight}-t-il? Combien gagne\ft[gagner]{v.t.}{to earn} son père?~» Alors seulement elles croient le connaître. Si vous dites aux grandes personnes: «~J'ai vu une belle maison en briques roses, avec des géraniums aux fenêtres\ft[fenêtre]{n.f.}{window} et des colombes\ft[colonbe]{n.f.}{dove} sur le toit\ft[toit]{n.m.}{roof}...~» Elles ne parviennent\ft[parvienir à]{v. 3 p.p. Prés.}{to achieve} pas à s'imaginer cette maison. Il faut leur dire: «~J'ai vu une maison de cent mille francs.~» Alors elles s'écrient\ft[s'ecrier]{v.pr.i.}{to cry}: «~Comme c'est joli!~»
+Si je vous ai raconté\ft[raconter]{v.t.}{to tell} ces détails sur l'astéroïde B 612 et si je vous ai confié son numéro, c'est à cause des grandes personnes. Les grandes personnes aiment les chiffres. Quand vous leur parlez d'un nouvel ami, elles ne vous questionnent jamais sur l'essentiel. Elles ne vous disent jamais: «~Quel est le son\ft[son]{n.m.}{sound} de sa voix? Quels sont les jeux\ft[jeu]{n.m.}{game} qu'il préfère? Est-ce qu'il collectionne les papillons?~» Elles vous demandent: «~Quel âge a-t-il? Combien a-t-il de frères? Combien pèse\ft[péser]{v.i.}{to weight}-t-il? Combien gagne son père?~» Alors seulement elles croient le connaître. Si vous dites aux grandes personnes: «~J'ai vu une belle maison en briques roses, avec des géraniums aux fenêtres et des colombes\ft[colonbe]{n.f.}{dove} sur le toit\ft[toit]{n.m.}{roof}...~» Elles ne parviennent\ft[parvienir à]{v. 3 p.p. Prés.}{to achieve} pas à s'imaginer cette maison. Il faut leur dire: «~J'ai vu une maison de cent mille francs.~» Alors elles s'écrient\ft[s'écrier]{v.pr.i.}{to cry}: «~Comme c'est joli!~»
 
-Ainsi, si vous leur dites: «~La preuve\ft[preuv]{n.f.}{proof} que le petit prince a éxisté c'est qu'il était ravissant\ft[ravissant]{adj.}{gorgeous, beautiful}, et qu'il voulait un mouton. Quand on veut un mouton, c'est la preuve qu'on existe~» Elles hausseront\ft[hausser]{v.t.}{to raiser, to increase, to put up	} les épaules\ft[épaule]{n.f.}{shoulder} et vous traiteront\ft[traiter]{v.t.}{to treat} d'enfant! Mais si vous leur dites: «~La planète d'où il venait est l'astéroide B 612~» alors elles seront convincues, et elles vous laisseront tranquille\ft[tranquille]{adj.}{quiet} avec leurs questions. Elles sont comme ça. Il ne faut pas leur en vouloir. Les enfants doivent être très indulgents\ft[endulgent]{adj.}{lenient, forgiving} envers\ft[envers]{prép.}{towards, to} les grandes personnes.
+Ainsi, si vous leur dites: «~La preuve que le petit prince a existé c'est qu'il était ravissant\ft[ravissant]{adj.}{gorgeous, beautiful}, et qu'il voulait un mouton. Quand on veut un mouton, c'est la preuve qu'on existe~» Elles hausseront\ft[hausser]{v.t.}{to raiser, to increase, to put up} les épaules\ft[épaule]{n.f.}{shoulder} et vous traiteront\ft[traiter]{v.t.}{to treat} d'enfant! Mais si vous leur dites: «~La planète d'où il venait est l'astéroïde B 612~» alors elles seront convaincues, et elles vous laisseront tranquille\ft[tranquille]{adj.}{quiet} avec leurs questions. Elles sont comme ça. Il ne faut pas leur en vouloir. Les enfants doivent être très indulgents\ft[endulgent]{adj.}{lenient, forgiving} envers\ft[envers]{prép.}{towards, to} les grandes personnes.
 
-Mais, bien sûr, nous qui comprenons la vie, nous nous moquons\ft[se monquer de]{v.pr.+prép.}{to laugh at, to make fun of} bien des numéros! J'aurais\ft[aurais]{v. 1 p.s. Cond.}{ avoir} aimé commencer cette histoire à la façon\ft[façon]{n.f.}{manner, way} des contes\ft[conte de fée]{}{fairy tale} de fées. J'aurais aimé dire:
+Mais, bien sûr, nous qui comprenons la vie, nous nous moquons\ft[se monquer de]{v.pr.+prép.}{to laugh at, to make fun of} bien des numéros! J'aurais\ft[aurais]{v. 1 p.s. Cond.}{avoir} aimé commencer cette histoire à la façon\ft[façon]{n.f.}{manner, way} des contes\ft[conte de fée]{}{fairy tale} de fées. J'aurais aimé dire:
 
 «~Il était une fois un petit prince qui habitait une planète à peine plus grande que lui, et qui avait besoin d'un ami...~» Pour ceux qui comprennent la vie, ça aurait eu l'air beaucoup plus vrai.
 
-%Car je n'aime pas qu'on lise\ft[lire]{v.t. 3 p.s. Près.subj.}{to read} mon livre à la légère\ft[à la légèr]{loc.adv.}{lightly}, j'éprouve\ft[éprouver]{v.t.}{to feel, to experience} tant de chagrin\ft[chgrin]{n.m.}{sorrow, grief} à raconter ces souvenirs. Il y a six ans déjà que mon ami s'en est allé avec son mouton. Si j'essaie ici de le décrire\ft[deécrire]{v.t.}{to describe}, c'est afin\ft[afin de]{loc.prép.}{so as to, in order to} de ne pas l'oublier. C'est triste\ft[triste]{adj.}{sad} d'oublier un ami. Tout le monde n'a pas eu un ami. Et je puis devenir comme les grandes personnes qui ne s'intéressent plus qu'aux chiffres. C'est donc pour ça encore que j'ai acheté une boîte\ft[boîte]{n.f.}{box} de couleurs et des crayons. C'est dur\ft[dur]{adj.}{hard} de se remettre au dessin, à mon âge, quand on n'a jamais fait d'autres tentatives\ft[tentative]{n.f.}{attempt} que celle d'un boa fermé et celle d'un boa ouvert, à l'âge de six ans! J'essayerais bien sûr, de faire des portraits le plus ressemblants\ft[ressemblant]{adj.}{lifelike} possible. Mais je ne suis pas tout à fait certain de réussir. Un dessin va, et l'autre ne ressemble plus. Je me trompe\ft[se tromper]{v.pr.i.}{make a mistake} un peu aussi sur la taille\ft[taille]{n.f.}{dressing}. Ici le petit prince est trop grand. Là il est trop petit. J'hésite aussi sur la couleur de son costume.
+Car je n'aime pas qu'on lise mon livre à la légère\ft[à la légèr]{loc.adv.}{lightly}, j'éprouve\ft[éprouver]{v.t.}{to feel, to experience} tant de chagrin\ft[chagrin]{n.m.}{sorrow, grief} à raconter ces souvenirs. Il y a six ans déjà que mon ami s'en est allé avec son mouton. Si j'essaie ici de le décrire, c'est afin\ft[afin de]{loc.prép.}{so as to, in order to} de ne pas l'oublier. C'est triste d'oublier un ami. Tout le monde n'a pas eu un ami. Et je puis devenir comme les grandes personnes qui ne s'intéressent plus qu'aux chiffres. C'est donc pour ça encore que j'ai acheté une boîte\ft[boîte]{n.f.}{box} de couleurs et des crayons. C'est dur\ft[dur]{adj.}{hard} de se remettre au dessin, à mon âge, quand on n'a jamais fait d'autres tentatives\ft[tentative]{n.f.}{attempt} que celle d'un boa fermé et celle d'un boa ouvert, à l'âge de six ans! J'essayerais bien sûr, de faire des portraits le plus ressemblants possible. Mais je ne suis pas tout à fait certain de réussir. Un dessin va, et l'autre ne ressemble plus. Je me trompe\ft[se tromper]{v.pr.i.}{make a mistake} un peu aussi sur la taille\ft[taille]{n.f.}{dressing}. Ici le petit prince est trop grand. Là il est trop petit. J'hésite aussi sur la couleur de son costume.
 
-%Alors je tâtonne comme ci et comme ça, tant bien que mal\ft[tant bien que mal]{loc.adv.}{after a fashion, some how}. Je me tromperai\ft[]{Fut.}{} enfin sur certains détails plus importants. Mais ça, il faudra me le pardonner\ft[pardonner]{v.t.}{to forgive}. Mon ami ne donnait jamais d'explications. Il me croyait peut-être\ft[peut-être]{adv.}{maybe, perhaps} semblable\ft[semblable]{adj.}{similar, alike} à lui. Mais moi, malheureusement\ft[malheureusement]{adv.}{unfortunately}, je ne sais pas voir les moutons à travers\ft[à travers]{loc.prép.}{through, across} les caisses. Je suis peut-être un peu comme les grandes personnes. J'ai dû vieillir.
+Alors je tâtonne comme ci et comme ça, tant bien que mal\ft[tant bien que mal]{loc.adv.}{after a fashion, some how}. Je me tromperai enfin sur certains détails plus importants. Mais ça, il faudra me le pardonner. Mon ami ne donnait jamais d'explications. Il me croyait peut-être semblable à lui. Mais moi, malheureusement, je ne sais pas voir les moutons à travers\ft[à travers]{loc.prép.}{through, across} les caisses. Je suis peut-être un peu comme les grandes personnes. J'ai dû vieillir.
 
 \parachapter[V]{} %Le Chapitre V
 \maincol
-Chaque\ft[chaque]{dét.}{each} jour j'apprenais quelque chose sur la planète, sur le départ\ft[départ]{n.m.}{departure}, sur le voyage. Ca venait tout doucement, au hasard\ft[au hasard de]{loc.prép.}{je me suis fait des amis au hasard de mes voyages.: I made friends with people I happened to meet on my travels} des réflexions. C'est ainsi que, le troisième jour, je connus le drame\ft[drame]{n.m.}{drama} des baobabs.
+Chaque jour j'apprenais quelque chose sur la planète, sur le départ, sur le voyage. Ça venait tout doucement, au hasard des réflexions. C'est ainsi que, le troisième jour, je connus le drame des baobabs.
 \ipacol
-ʃak ʒuʁ ʒapʁənɛ kɛlkə ʃoz syʁ la planɛt, syʁ lə depaːʁ, syʁ lə vwajaːʒ. ka vənɛ tu dusmɑ̃, o azaʁ de ʁeflɛksjɔ̃. sɛt- ɛ̃si kə, lə tʁwazjɛm ʒuːʁ, ʒə kɔny lə dʁam de baɔbab.
+%ʃak ʒuʁ ʒapʁənɛ kɛlkə ʃoz syʁ la planɛt, syʁ lə depaːʁ, syʁ lə vwajaːʒ. ka vənɛ tu dusmɑ̃, o azaʁ de ʁeflɛksjɔ̃. sɛt- ɛ̃si kə, lə tʁwazjɛm ʒuːʁ, ʒə kɔny lə dʁam de baɔbab.
 \maincol
 Cette fois-ci encore fut grâce\ft[grâce]{n.f.}{favour} au mouton, car brusquement le petit prince m'interrogea, comme pris d'un doute\ft[doute]{n.m.}{doubt} grave:
 
@@ -342,13 +352,13 @@ Cette fois-ci encore fut grâce\ft[grâce]{n.f.}{favour} au mouton, car brusquem
 
 Je ne compris pas pourquoi il était si important que les moutons mangeassent\ft[]{Subj.impar.}{} les arbustes. Mais le petit prince ajouta:
 
--Par conséquent\ft[par conséquent]{loc.adv.}{therefore, consequently} ils mangent aussi les baobabs?
+-Par conséquent ils mangent aussi les baobabs?
 
-Je fis remarquer\ft[remarquer]{v.t.}{to notice, to remark} au petit prince que les baobabs ne sont pas des arbustes, mais des arbres\ft[arbre]{n.m.}{tree} grand comme des églises\ft[église]{n.f.}{church} et que, si même\ft[même]{adv.}{even} il emportait avec lui tout un troupeau\ft[troupeau]{n.m.}{herd} d'éléphants, ce troupeau ne viendrait pas à bout\ft[bout]{n.m.}{end} d'un seul baobab.
+Je fis remarquer au petit prince que les baobabs ne sont pas des arbustes, mais des arbres\ft[arbre]{n.m.}{tree} grand comme des églises\ft[église]{n.f.}{church} et que, si même\ft[même]{adv.}{even} il emportait avec lui tout un troupeau\ft[troupeau]{n.m.}{herd} d'éléphants, ce troupeau ne viendrait pas à bout\ft[bout]{n.m.}{end} d'un seul baobab.
 
 L'idée du troupeau d'éléphants fit rire le petit prince:
 
--Il faudrait\ft[faudrait]{Cond.}{falloir} les mettre\ft[mettre]{v.t}{put} les uns sur les autres...
+-Il faudrait les mettre\ft[mettre]{v.t}{put} les uns sur les autres...
 
 Mais il remarqua avec sagesse\ft[sagesse]{n.f.}{good sense, wisdom}:
 
@@ -360,20 +370,22 @@ Mais il remarqua avec sagesse\ft[sagesse]{n.f.}{good sense, wisdom}:
 
 Il me répondit: «~Ben! Voyons!~» comme il s'agissait là d'une évidence. Et il me fallut un grand effort d'intelligence pour comprendre à moi seul ce problème.
 
-Et en effet, sur la planète du petit prince, il y avait comme sur toutes les planètes, de bonnes herbes et de mauvaises herbes. Par conséquent de bonnes graines de bonnes herbes et de mauvaises graines de mauvaises herbes. Mais les graines sont invisibles. Elles dorment dans le secrèt de la terre jusqu'à ce qu'il prenne fantaisie à l'une d'elles de se réveiller. Alors elle s'étire\ft[s'étirer]{v.pr.i.}{to stretch}, et pousse\ft[pousser]{v.t.}{to push} d'abord timidement vers le soleil une ravissante\ft[ravissant]{adj.}{gorgeous, beautiful} petite brindille\ft[brindille]{n.f.}{twig} de radis ou de rosier, on peut la laisser pousser comme elle veut. Mais s'il s'agit\ft[agir]{v.t.}{to act, to behave} d'une mauvaise plante, il faut arracher\ft[arracher]{v.t.}{pull} la plante aussitôt, dès\ft[dès que]{loc.prép.}{as soon as, when ever} qu'on a su\ft[savoir]{Part.pas.}{} la reconnaître. Or il y avait des graines terribles sur la planète du petit prince... c'étaient les graines de baobabs. Le sol\ft[sol]{n.m.}{soil} de la planète en était infesté. Or un baobab, si l'on si prend trop tard, on ne peut jamais plus s'en débarrasser\ft[débarrasser]{v.t.}{clear}. Il encombre\ft[encombrer]{v.t.}{to fill} toute la planète. Il la perfore\ft[perforer]{v.t.}{to pierce} de ses racines\ft[racine]{n.f.}{root}. Et si la planète est trop petite, et si les baobabs sont trop nombreux\ft[nombreux]{adj.}{many}, ils la font éclater\ft[éclater]{v.i.}{to explode}.
+Et en effet, sur la planète du petit prince, il y avait comme sur toutes les planètes, de bonnes herbes et de mauvaises herbes. Par conséquent de bonnes graines de bonnes herbes et de mauvaises graines de mauvaises herbes. Mais les graines sont invisibles. Elles dorment dans le secret de la terre jusqu'à ce qu'il prenne fantaisie à l'une d'elles de se réveiller. Alors elle s'étire\ft[s'étirer]{v.pr.i.}{to stretch}, et pousse\ft[pousser]{v.t.}{to push} d'abord timidement vers le soleil une ravissante\ft[ravissant]{adj.}{gorgeous, beautiful} petite brindille\ft[brindille]{n.f.}{twig} inoffensive.
+
+S'il s'agît d'une brindille de radis ou de rosier, on peut la laisser pousser comme elle veut. Mais s'il s'agit d'une mauvaise plante, il faut arracher\ft[arracher]{v.t.}{pull} la plante aussitôt, dès qu'on a su la reconnaître. Or il y avait des graines terribles sur la planète du petit prince... c'étaient les graines de baobabs. Le sol de la planète en était infesté. Or un baobab, si l'on si prend trop tard, on ne peut jamais plus s'en débarrasser\ft[débarrasser]{v.t.}{clear}. Il encombre\ft[encombrer]{v.t.}{to fill} toute la planète. Il la perfore\ft[perforer]{v.t.}{to pierce} de ses racines\ft[racine]{n.f.}{root}. Et si la planète est trop petite, et si les baobabs sont trop nombreux, ils la font éclater\ft[éclater]{v.i.}{to explode}.
 
 \incpic{pic/image14.jpeg}
 
-«~C'est une question de discipline, me disait plus tard le petit prince. Quand on a terminé sa toilette du matin, il faut faire soigneusement\ft[soigneusement]{adv.}{neatly, carefully} la toilette de la planète. Il faut s'astreindre\ft[astreindre qun. à faire qch.]{}{to comple sb. to do sth.} réguliérement\ft[réguliérement]{adv.}{steadly} à arracher les baobabs dès\ft[dès que]{loc.}{adv. as soon as} qu'on les distingue d'avec les rosiers auxquels ils se rassemblent beaucoup quand ils sont très jeunes. C'est un travail très ennuyeux\ft[ennuyeux]{adj.}{boring}, mais très facile.~» 
+«~C'est une question de discipline, me disait plus tard le petit prince. Quand on a terminé sa toilette du matin, il faut faire soigneusement\ft[soigneusement]{adv.}{neatly, carefully} la toilette de la planète. Il faut s'astreindre\ft[astreindre qun. à faire qch.]{}{to comple sb. to do sth.} régulièrement\ft[régulièrement]{adv.}{steadly} à arracher les baobabs dès qu'on les distingue d'avec les rosiers auxquels ils se rassemblent beaucoup quand ils sont très jeunes. C'est un travail très ennuyeux\ft[ennuyeux]{adj.}{boring}, mais très facile.~» 
 
 \incpic{pic/image15.jpeg}
 
-Et un jour il me conseilla\ft[conseiller]{v.t.}{to recommend} de m'appliquer\ft[s'appliquer à faire]{}{to try to do} à réussir un beau dessin, pour bien faire entrer ça dans la tête des enfants de chez moi. «~S'ils voyagent un jour, me disait-il, ça pourra leur servir. Il est quelquefois sans inconvénient de remettre à plus tard son travail. Mais, s'il s'agit des baobabs, c'est toujours une catastrophe\ft[catastrophe]{n.f.}{disaster}. J'ai connu une planète, habitée par un paresseux\ft[parseux]{n.m.}{lazy man}. Il avait négligé trois arbustes...~»
+Et un jour il me conseilla\ft[conseiller]{v.t.}{to recommend} de m'appliquer\ft[s'appliquer à faire]{}{to try to do} à réussir un beau dessin, pour bien faire entrer ça dans la tête des enfants de chez moi. «~S'ils voyagent un jour, me disait-il, ça pourra leur servir. Il est quelquefois sans inconvénient de remettre à plus tard son travail. Mais, s'il s'agit des baobabs, c'est toujours une catastrophe. J'ai connu une planète, habitée par un paresseux\ft[paresseux]{n.m.}{lazy man}. Il avait négligé trois arbustes...~»
 
-Et, sur les indications du petit prince, j'ai dessiné cette planète-là. Je n'aime guère prendre le ton\ft[ton]{n.m.}{tone} d'un moraliste\ft[moraliste]{n.m.}{moralist}. Mais le danger des baobabs est si peu connu, et les risques courus par celui qui s'égarerait dans un astéroïde sont si considérables, que, pour une fois, je fais exception à ma réserve. Je dis: «~Enfants! Faites attention aux baobabs!~» C'est pour avertir\ft[avertir]{v.t.}{to inform, to warn} mes amis du danger qu'ils frôlaient depuis longtemps, comme moi-même, sans le connaître, que j'ai tant travaillé ce dessin-là. La leçon que je donnais en valait\ft[valoir]{v.t. 3 p.s. Impar.}{to be worth} la peine. Vous vous demanderez peut-être: Pourquoi n'y a-t-il pas dans ce livre, d'autres dessins aussi grandioses que le dessin des baobabs? La réponse est bien simple: J'ai essayé mais je n'ai pas pu réussir. Quand j'ai dessiné les baobabs j'ai été animé\ft[animer]{v.t.}{to motivate} par le sentiment\ft[sentiment]{n.m.}{feeling} de l'urgence.
+Et, sur les indications du petit prince, j'ai dessiné cette planète-là. Je n'aime guère prendre le ton\ft[ton]{n.m.}{tone} d'un moraliste\ft[moraliste]{n.m.}{moralist}. Mais le danger des baobabs est si peu connu, et les risques courus par celui qui s'égarerait dans un astéroïde sont si considérables, que, pour une fois, je fais exception à ma réserve. Je dis: «~Enfants! Faites attention aux baobabs!~» C'est pour avertir\ft[avertir]{v.t.}{to inform, to warn} mes amis du danger qu'ils frôlaient depuis longtemps, comme moi-même, sans le connaître, que j'ai tant travaillé ce dessin-là. La leçon que je donnais en valait\ft[valoir]{v.t. 3 p.s. Impar.}{to be worth} la peine. Vous vous demanderez peut-être: Pourquoi n'y a-t-il pas dans ce livre, d'autres dessins aussi grandioses que le dessin des baobabs? La réponse est bien simple: J'ai essayé mais je n'ai pas pu réussir. Quand j'ai dessiné les baobabs j'ai été animé\ft[animer]{v.t.}{to motivate} par le sentiment de l'urgence.
 
 \parachapter[VI]{} %Le Chaptre VI
-Ah! Petit prince, j'ai compris, peu à peu, ainsi, ta petite vie mélancolique. Tu n'avais eu longtemps pour ta distraction que la douceur des couchers du soleil. J'ai appris ce détail nouveau\ft[nouveau]{adj.}{new}, le quatrième jour au matin, quand tu m'as dit:
+Ah! Petit prince, j'ai compris, peu à peu, ainsi, ta petite vie mélancolique. Tu n'avais eu longtemps pour ta distraction que la douceur des couchers du soleil. J'ai appris ce détail nouveau, le quatrième jour au matin, quand tu m'as dit:
 
 -J'aime bien les couchers de soleil. Allons voir un coucher de soleil...
 
@@ -383,26 +395,26 @@ Ah! Petit prince, j'ai compris, peu à peu, ainsi, ta petite vie mélancolique. 
 
 -Attendre que le soleil se couche.
 
-Tu as eu l'air\ft[air]{n.m.}{air, look} très surpris d'abord, et puis tu as ri de toi-même. Et tu m'as dit:
+Tu as eu l'air très surpris d'abord, et puis tu as ri de toi-même. Et tu m'as dit:
 
 -Je me crois toujours chez moi!
 
-En effet. Quand il est midi aux Etats-Unis, le soleil, tout le monde sait, se couche sur la France. Il suffirait\ft[suffire]{v.i. 3 p.s. Cond.}{to be enough, to be sufficient, to suffice} de pouvoir aller en France en une minute pour assister\ft[assister à]{v.+prép.}{to attend, to witness} au coucher de soleil. Malheureusement la France est bien trop éloignée\ft[éloigné]{adj.}{distant, remote, faraway}. Mais, sur ta si petite planète, il te suffirait de tirer\ft[tirer]{v.t.}{to pull, to drag} ta chaise de quelques pas\ft[pas]{n.m.}{step}. Et tu regardais le crépuscule\ft[crépuscule]{n.m.}{twilight} chaque fois que tu le désirais\ft[désirer]{v.t.}{to wish for}...
+En effet. Quand il est midi aux États-Unis, le soleil, tout le monde sait, se couche sur la France. Il suffirait de pouvoir aller en France en une minute pour assister\ft[assister à]{v.+prép.}{to attend, to witness} au coucher de soleil. Malheureusement la France est bien trop éloignée\ft[éloigné]{adj.}{distant, remote, faraway}. Mais, sur ta si petite planète, il te suffirait de tirer\ft[tirer]{v.t.}{to pull, to drag} ta chaise de quelques pas. Et tu regardais le crépuscule\ft[crépuscule]{n.m.}{twilight} chaque fois que tu le désirais\ft[désirer]{v.t.}{to wish for}...
 
 -Un jour, j'ai vu le soleil se coucher quarante-trois fois!
 
 Et un peu plus tard tu ajoutais:
 
--Tu sais... quand on est tellement triste\ft[triste]{adj.}{sad} on aime les couchers de soleil...
+-Tu sais... quand on est tellement triste on aime les couchers de soleil...
 
 -Le jour des quarante-trois fois tu étais donc tellement triste?
 
-Mais le petit prince ne répontit pas. 
+Mais le petit prince ne répondit pas. 
 
 \incpic{pic/image16.jpeg}
 
 \parachapter[VII]{} %Le Chaptre VII
-Le cinquième jour, toujours grâce au mouton, ce secrèt de la vie du petit prince me fut révélé. Il me demanda avec brusquerie, sans préambule, comme le fruit d'un problème longtemps médité en silence:
+Le cinquième jour, toujours grâce au mouton, ce secret de la vie du petit prince me fut révélé. Il me demanda avec brusquerie, sans préambule, comme le fruit d'un problème longtemps médité en silence:
 
 -Un mouton, s'il mange les arbustes, il mange aussi les fleurs?
 
@@ -414,7 +426,7 @@ Le cinquième jour, toujours grâce au mouton, ce secrèt de la vie du petit pri
 
 -Alors les épines, à quoi servent-elles?
 
-Je ne le savais pas. J'étais alors très occupé à essayer de dévisser\ft[dévisser]{v.t.}{loosen} un boulon trop serré\ft[serré]{adj.}{tight} de mon moteur. J'étais très soucieux\ft[soucieux]{adj.}{worried} car ma panne\ft[panne]{n.f.}{break down} commençait de m'apparaître comme très grave, et l'eau à boire qui s'épuisait\ft[épuiser]{v.t.}{to exhaust} me faisait craindre\ft[craindre]{v.t.}{to fear} le pire\ft[le pire]{the}{worst}.
+Je ne le savais pas. J'étais alors très occupé à essayer de dévisser\ft[dévisser]{v.t.}{loosen} un boulon trop serré\ft[serré]{adj.}{tight} de mon moteur. J'étais très soucieux\ft[soucieux]{adj.}{worried} car ma panne\ft[panne]{n.f.}{break down} commençait de m'apparaître comme très grave, et l'eau à boire qui s'épuisait\ft[épuiser]{v.t.}{to exhaust} me faisait craindre\ft[craindre]{v.t.}{to fear} le pire.
 
 -Les épines, à quoi servent-elles?
 
@@ -426,9 +438,9 @@ Le petit prince ne renonçait\ft[renoncer]{v.i.}{to give up} jamais à une quest
 
 Mais après un silence il me lança, avec une sorte de rancune:
 
--Je ne te crois pas! les fleures sont faibles. Elles sont naives. Elles se rassurent comme elles peuvent. Elles se croient terribles avec leurs épines...
+-Je ne te crois pas! Les fleures sont faibles. Elles sont naïves. Elles se rassurent comme elles peuvent. Elles se croient terribles avec leurs épines...
 
-Je ne répondis rien. A cet instant-là je me disais: «~Si ce boulon résiste encore, je le ferai sauter d'un coup de marteau.~» Le petit prince dérangea de nouveau mes reflexions:
+Je ne répondis rien. A cet instant-là je me disais: «~Si ce boulon résiste encore, je le ferai sauter d'un coup de marteau\ft[]{n.m}{hammer}.~» Le petit prince dérangea de nouveau mes réflexions:
 
 -Et tu crois, toi, que les fleurs...
 
@@ -438,17 +450,17 @@ Il me regarda stupéfiait.
 
 -De choses sérieuses!
 
-Il me voyait, mon marteau à la main, et les doigts noirs de cambouis, penché sur un objet qui lui semblait très laid.
+Il me voyait, mon marteau à la main, et les doigts noirs de cambouis\ft[]{n.m.}{dirty oil}, penché sur un objet qui lui semblait très laid.
 
 -Tu parles comme les grandes personnes!
 
-Ca me fit un peu honte. Mais, impitoyable, il ajouta:
+Ça me fit un peu honte. Mais, impitoyable, il ajouta:
 
 -Tu confonds tout... tu mélanges tout!
 
 Il était vraiment très irrité. Il secouait au vent des cheveux tout dorés:
 
--Je connais une planète où il y a un Monsieur cramoisi. Il n'a jamais respiré une fleur. Il n'a jamais regardé une étoile. Il n'a jamais aimé personne. Il n'a jamais rien fait d'autre que des additions. Et toute la journée il répète comme toi: «~Je suis un homme sérieux! Je suis un homme sérieux!~» et ça le fait gonfler d'orgueil. Mais ce n'est pas un homme, c'est un champignon! 
+-Je connais une planète où il y a un Monsieur cramoisi\ft[]{adj.}{crimson}. Il n'a jamais respiré une fleur. Il n'a jamais regardé une étoile. Il n'a jamais aimé personne. Il n'a jamais rien fait d'autre que des additions. Et toute la journée il répète comme toi: «~Je suis un homme sérieux! Je suis un homme sérieux!~» et ça le fait gonfler\ft[]{v}{to inflate} d'orgueil\ft[]{n.m.}{pride}. Mais ce n'est pas un homme, c'est un champignon! 
 
 \incpic{pic/image17.jpeg}
 
@@ -464,14 +476,14 @@ Il rougit, puis reprit:
 
 -Si quelqu'un aime une fleure qui n'existe qu'à un exemplaire dans les millions d'étoiles, ça suffit pour qu'il soit heureux quand il les regarde. Il se dit: «~Ma fleur est là quelque part...~» Mais si le mouton mange la fleur, c'est pour lui comme si, brusquement, toutes les étoiles s'éteignaient! Et ce n'est pas important ça!
 
-Il ne put rien dire de plus. Il éclata brusquement en sanglots. la nuit était tombée. J'avais lâché mes outils. Je me moquais bien de mon marteau, de mon boulon, de la soif et de la mort. Il y avait sur une étoile, une planète, la mienne, la Terre, un petit prince à consoler! Je le pris dans les bras. Je le berçai. Je lui disais: «~La fleur que tu aimes n'est pas en danger... Je lui dessinerai une muselière, à ton mouton... Je te dessinerais une armure pour ta fleur... Je...~» Je ne savais pas trop quoi dire. Je me sentais très maladroit. Je ne savais comment l'atteindre, où le rejoindre... C'est tellement mystérieux, le pays des larmes.
+Il ne put rien dire de plus. Il éclata brusquement en sanglots. La nuit était tombée. J'avais lâché mes outils. Je me moquais bien de mon marteau, de mon boulon, de la soif et de la mort. Il y avait sur une étoile, une planète, la mienne, la Terre, un petit prince à consoler! Je le pris dans les bras. Je le berçai. Je lui disais: «~La fleur que tu aimes n'est pas en danger... Je lui dessinerai une muselière, à ton mouton... Je te dessinerais une armure pour ta fleur... Je...~» Je ne savais pas trop quoi dire. Je me sentais très maladroit. Je ne savais comment l'atteindre, où le rejoindre... C'est tellement mystérieux, le pays des larmes\ft[]{n.f}{tear}.
 
 \parachapter[VIII]{} %Le Chaptre VIII
-J'appris bien vite à mieux connaître cette fleur. Il y avait toujours eu, sur la planète du petit prince, des fleurs très simples, ornées d'un seul rang de pétales, et qui ne tenaient point de place, et qui ne dérangeaient personne. Elles apparaissaient un matin dans l'herbe, et puis elles s'éteignaient le soir. Mais celle-là avait germé un jour, d'une graine apportée d'on ne sais où, et le petit prince avait surveillé de très près cette brindille qui ne ressemblait pas aux autres brindilles. Ca pouvait être un nouveau genre de baobab. Mais l'arbuste cessa vite de croître, et commença de préparer une fleur. Le petit prince, qui assistait à l'installation d'un bouton énorme, sentait bien qu'il en sortirait une apparition miraculeuse, mais la fleur n'en finissait pas de se préparer à être belle, à l'abri de sa chambre verte. Elle choisissait avec soin ses couleures. Elle s'habillait lentement, elle ajustait un à un ses pétales. Elle ne voulait pas sortir toute fripée comme les coquelicots. Elle ne voulait apparaître que dans le plein rayonnement de sa beauté. Eh! oui. Elle était très coquette! Sa toilette mystérieuse avait donc duré des jours et des jours. Et puis voici qu'un matin, justement à l'heure du lever du soleil, elle s'était montrée.
+J'appris bien vite à mieux connaître cette fleur. Il y avait toujours eu, sur la planète du petit prince, des fleurs très simples, ornées d'un seul rang de pétales, et qui ne tenaient point de place, et qui ne dérangeaient personne. Elles apparaissaient un matin dans l'herbe, et puis elles s'éteignaient le soir. Mais celle-là avait germé un jour, d'une graine apportée d'on ne sais où, et le petit prince avait surveillé de très près cette brindille qui ne ressemblait pas aux autres brindilles. Ça pouvait être un nouveau genre de baobab. Mais l'arbuste cessa vite de croître, et commença de préparer une fleur. Le petit prince, qui assistait à l'installation d'un bouton énorme, sentait bien qu'il en sortirait une apparition miraculeuse, mais la fleur n'en finissait pas de se préparer à être belle, à l'abri de sa chambre verte. Elle choisissait avec soin ses couleurs. Elle s'habillait lentement, elle ajustait un à un ses pétales. Elle ne voulait pas sortir toute fripée comme les coquelicots. Elle ne voulait apparaître que dans le plein rayonnement de sa beauté. Eh! oui. Elle était très coquette! Sa toilette mystérieuse avait donc duré des jours et des jours. Et puis voici qu'un matin, justement à l'heure du lever du soleil, elle s'était montrée.
 
 Et elle, qui avait travaillé avec tant de précision, dit en bâillant:
 
--Ah! Je me réveille à peine... Je vous demande pardon... Je suis encore toute décoifée...
+-Ah! Je me réveille à peine... Je vous demande pardon... Je suis encore toute décoiffée...
 
 Le petit prince, alors, ne put contenir son admiration:
 
@@ -489,7 +501,7 @@ Le petit prince devina bien qu'elle n'était pas trop modeste, mais elle était 
 
 Et le petit prince, tout confus, ayant été chercher un arrosoir d'eau fraîche, avait servi la fleur.
 
-Ainsi l'avait-elle bien vite tourmenté par sa vanité un peu ombrageuse. Un jour, par exemple, parlant de ses quatres épines, elle avait dit au petit prince:
+Ainsi l'avait-elle bien vite tourmenté par sa vanité un peu ombrageuse. Un jour, par exemple, parlant de ses quatre épines, elle avait dit au petit prince:
 
 -Ils peuvent venir, les tigres, avec leurs griffes!
 
@@ -501,13 +513,13 @@ Ainsi l'avait-elle bien vite tourmenté par sa vanité un peu ombrageuse. Un jou
 
 -Pardonnez-moi...
 
--Je ne crains rien des tigres, mais j'ai horreur des courrants d'air. Vous n'auriez pas un paravent?
+-Je ne crains rien des tigres, mais j'ai horreur des courants d'air. Vous n'auriez pas un paravent?
 
-«~Horreur des courrants d'air... ce n'est pas de chance, pour une plante, avait remarqué le petit prince. Cette fleur est bien compliquée...~»
+«~Horreur des courants d'air... ce n'est pas de chance, pour une plante, avait remarqué le petit prince. Cette fleur est bien compliquée...~»
 
--Le soir vous me mettrez sous un globe. Il fait très froid chez vous. C'est mal installé. Là d'ou je viens...
+-Le soir vous me mettrez sous un globe. Il fait très froid chez vous. C'est mal installé. Là d'où je viens...
 
-Mais elle s'était interrompue. Elle était venue sous forme de graine. Elle n'avait rien pu connaître des autres mondes. Humiliée de s'être laissé surprendre à préparer un mensonge aussi naif, elle avait toussé deux ou trois fois, pour mettre le petit prince dans son tort 
+Mais elle s'était interrompue. Elle était venue sous forme de graine. Elle n'avait rien pu connaître des autres mondes. Humiliée de s'être laissé surprendre à préparer un mensonge\ft[]{n.m.}{lie} aussi naïf, elle avait toussé deux ou trois fois, pour mettre le petit prince dans son tort 
 
 \incpic{pic/image21.jpeg}
 
@@ -515,7 +527,7 @@ Mais elle s'était interrompue. Elle était venue sous forme de graine. Elle n'a
 
 -J'allais le chercher mais vous me parliez!
 
-Alors elle avait forcé sa toux pour lui infliger quand même des remords.
+Alors elle avait forcé sa toux\ft[]{n.f.}{/tu/ cough} pour lui infliger quand même des remords.
 
 Ainsi le petit prince, malgré la bonne volonté de son amour, avait vite douté d'elle. Il avait pris au sérieux des mots sans importance, et il est devenu très malheureux.
 
@@ -525,7 +537,7 @@ Il me confia encore:
 
 «~Je n'ai alors rien su comprendre! J'aurais dû la juger sur les actes et non sur les mots. Elle m'embaumait et m'éclairait. Je n'aurais jamais dû m'enfuir! J'aurais dû devinre sa tendresse derrière ses pauvres ruses. les fleurs sont si contradictoires! Mais j'étais trop jeune pour savoir l'aimer.~»
 \incpic{pic/image22.jpeg}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \parachapter[IX]{} %Le Chaptre IX
 Je crois qu'il profita, pour son évasion, d'une migration d'oiseaux sauvages. Au matin du départ il mit sa planète bien en ordre. Il ramona soigneusement ses volcans en activité. Il possédait deux volcans en activité. Et c'était bien commode pour faire chauffer le petit déjeuner du matin. Il possédait aussi un volcan étent. Mais, comme il disait, «~On ne sais jamais!~» Il ramona donc également le volcan éteint. S'ils sont bien ramonés, les volcans brûlent doucement et régulièrement, sans éruptions. les éruptions volcaniques sont comme des feux de cheminée. Evidemment sur notre terre nous sommes beaucoup trop petits pour ramoner nos volcans. C'est pourquoi ils nous causent tant d'ennuis. 
 
@@ -585,7 +597,7 @@ Le petit prince chercha des yeux où s'asseoir, mais la planète était toute en
 
 -Alors, lui dit le roi, je t'ordonne de bâiller. Je n'ai vu personne bâiller depuis des années. les bâillements sont pour moi des curiosités. Allons! bâille encore. C'est un ordre.
 
--Ca m'intimide... je ne peux plus... fit le petit prince tout rougissant.
+-Ça m'intimide... je ne peux plus... fit le petit prince tout rougissant.
 
 -Hum! Hum! répontit le roi. Alors je... je t'ordonne tantôt de bâiller et tantôt de...
 
@@ -699,7 +711,7 @@ Car, pour les vaniteux, les autres hommes sont des admirateurs.
 
 Le petit prince frappa ses mains l'une contre l'autre. Le vaniteux salua modestement en soulevant son chapeau.
 
--Ca c'est plus amusant que la visite du roi, se dit en lui même le petit prince. Et il recommença de frapper ses mains l'une contre l'autre. le vaniteux recommença de saluer en soulevant son chapeau.
+-Ça c'est plus amusant que la visite du roi, se dit en lui même le petit prince. Et il recommença de frapper ses mains l'une contre l'autre. le vaniteux recommença de saluer en soulevant son chapeau.
 
 Après cinq minutes d'exercice le petit prince se fatigua de la monotonie du jeu:
 
@@ -752,7 +764,7 @@ La quatrième planète était celle du businessman. Cet homme était si occupé 
 
 -Bonjour, lui dit celui-ci. Votre cigarette est éteinte.
 
--Trois et deux font cinq. Cinq et sept douze. Douze et trois quinze. Bonjour. Quinze et sept vingt-deux. Vingt-deux et six vingt-huit. Pas de temps de la rallumer. Vingt-six et cinq trente et un. Ouf! Ca fait donc cinq cent un millions six cent vingt-deux mille sept cent trente et un.
+-Trois et deux font cinq. Cinq et sept douze. Douze et trois quinze. Bonjour. Quinze et sept vingt-deux. Vingt-deux et six vingt-huit. Pas de temps de la rallumer. Vingt-six et cinq trente et un. Ouf! Ça fait donc cinq cent un millions six cent vingt-deux mille sept cent trente et un.
 
 \incpic{pic/image28.jpeg}
 
@@ -806,7 +818,7 @@ Le businessman comprit qu'il n'était point d'espoir de paix:
 
 -Et à quoi cela te sert-il de posséder les étoiles?
 
--Ca me sert à être riche.
+-Ça me sert à être riche.
 
 -Et à quoi cela te sert-il d'être riche?
 
@@ -824,11 +836,11 @@ Cependant il posa encore des questions:
 
 -Alors elles sont à moi, car j'y ai pensé le premier.
 
--Ca suffit?
+-Ça suffit?
 
 -Bien sûr. Quand tu trouves un diament qui n'est à personne, il est à toi. Quand tu trouves une île qui n'est à personne, elle est à toi. Quand tu as une idée le premier, tu la fais breveter: elle est à toi. Et moi je possède les étoiles, puisque jamais personne avant moi n'a songé à les posséder.
 
--Ca c'est vrai, dit le petit prince. Et qu'en fais-tu?
+-Ça c'est vrai, dit le petit prince. Et qu'en fais-tu?
 
 -Je les gère. Je les compte et je les recompte, dit le businessman. C'est difficile. Mais je suis un homme sérieux!
 
@@ -840,11 +852,11 @@ Le petit prince n'était pas satisfait encore.
 
 -Qu'est-ce que ça veut dire?
 
--Ca veut dire que j'écris sur un petit papier le nombre de mes étoiles. Et puis j'enferme à clef ce papier-là dans un tiroir.
+-Ça veut dire que j'écris sur un petit papier le nombre de mes étoiles. Et puis j'enferme à clef ce papier-là dans un tiroir.
 
 -Et c'est tout?
 
--Ca suffit!
+-Ça suffit!
 
 C'est amusant, pensa le petit prince. C'est assez poétique. Mais ce n'est pas très sérieux.
 
@@ -894,9 +906,9 @@ Puis il s'épongea le front avec un mouchoir à carreaux rouges.
 
 -Alors maintenant qu'elle fait un tour par minute, je n'ai plus un seconde de repos. J'allume et j'éteins une fois par minute!
 
--Ca c'est drôle! les jours chez toi durent une minute!
+-Ça c'est drôle! les jours chez toi durent une minute!
 
--Ce n'est pas drôle du tout, dit l'allumeur. Ca fait déjà un mois que nous parlons ensemble.
+-Ce n'est pas drôle du tout, dit l'allumeur. Ça fait déjà un mois que nous parlons ensemble.
 
 -Un mois?
 
@@ -916,7 +928,7 @@ Le petit prince poursuivit:
 
 -Ta planète est tellement petite que tu en fais le tour en trois enjambées. Tu n'as qu'à marcher lentement pour rester toujours au soleil. Quand tu voudras te reposer tu marcheras... et le jour durera aussi longtemps que tu voudras.
 
--Ca ne m'avance pas \# grand chose, dit l'allumeur. Ce que j'aime dans la vie, c'est dormir.
+-Ça ne m'avance pas \# grand chose, dit l'allumeur. Ce que j'aime dans la vie, c'est dormir.
 
 -Ce n'est pas de chance, dit le petit prince.
 
@@ -951,7 +963,7 @@ Le petit prince s'assit sur la table et souffla un peu. Il avait déjà tant voy
 
 -C'est un savant qui connaît où se trouvent les mers, les fleuves, les villes, les montagnes et les déserts.
 
--Ca c'est intéressant, dit le petit prince. Ca c'est enfin un véritable métier! Et il jeta un coup d'œil autour de lui sur la planète du géographe. Il n'avait jamais vu encore une planète aussi majestueuse.
+-Ça c'est intéressant, dit le petit prince. Ça c'est enfin un véritable métier! Et il jeta un coup d'œil autour de lui sur la planète du géographe. Il n'avait jamais vu encore une planète aussi majestueuse.
 
 -Elle est bien belle, votre planète. Est-ce qu'il y a des océans?
 
@@ -1017,7 +1029,7 @@ Et le géographe, ayant ouvert son régistre, tailla son crayon. On note d'abord
 
 -Mais qu'est-ce que signifie «~éphémère~»? répéta le petit prince qui, de sa vie, n'avait renoncé à une question, une fois qu'il l'avait posée.
 
--Ca signifie «~qui est menacé de disparition prochaine~».
+-Ça signifie «~qui est menacé de disparition prochaine~».
 
 -Ma fleur est menacée de disparition prochaine?
 
@@ -1166,7 +1178,7 @@ Et il se sentit très malheureux. Sa fleur lui avait raconté qu'elle était seu
 
 «~Elle serait bien vexée, se dit-il, si elle voyait ça... elle tousserait énormément et ferait semblant de mourrir pour échapper au ridicule. Et je serais bien obligé de faire semblant de la soigner, car, sinon, pour m'humilier moi aussi, elle se laisserait vraiment mourir...~»
 
-Puis il se dit encore: «~Je me croyais riche d'une fleur unique, et je ne possède qu'une rose ordinaire. Ca et mes trois volcans qui m'arrivent au genou, et dont l'un, peut-être, est éteint pour toujours, ça ne fais pas de moi un bien grand prince...~» Et, couché dans l'herbe, il pleura. 
+Puis il se dit encore: «~Je me croyais riche d'une fleur unique, et je ne possède qu'une rose ordinaire. Ça et mes trois volcans qui m'arrivent au genou, et dont l'un, peut-être, est éteint pour toujours, ça ne fais pas de moi un bien grand prince...~» Et, couché dans l'herbe, il pleura. 
 
 \incpic{pic/image37.jpeg}
 
@@ -1203,7 +1215,7 @@ Mais après réflexion, il ajouta :
 
 -Non, dit le petit prince. Je cherche des amis.Qu'est-ce que signifie «~apprivoiser~»?
 
--C'est une chose trop oubliée, dit le renard. Ca signifie «~Créer des liens...~»
+-C'est une chose trop oubliée, dit le renard. Ça signifie «~Créer des liens...~»
 
 -Créer des liens?
 
@@ -1223,7 +1235,7 @@ Mais après réflexion, il ajouta :
 
 -Non.
 
--Ca, c'est intéressant! Et des poules ?
+-Ça, c'est intéressant! Et des poules ?
 
 -Non.
 
@@ -1616,7 +1628,7 @@ Et il rit encore. Puis il redevint sérieux:
 
 Mais il était soucieux.
 
--Je te dis ça... c'est à cause aussi du serpent. Il ne faut pas qu'il te morde... Les serpents, c'est méchant. Ca peut mordre pour le plaisir...
+-Je te dis ça... c'est à cause aussi du serpent. Il ne faut pas qu'il te morde... Les serpents, c'est méchant. Ça peut mordre pour le plaisir...
 
 -Je ne te quitterai pas.
 
@@ -1670,7 +1682,7 @@ Moi je m'assis parce que je ne pouvais plus me tenir debout. Il dit:
 
 Il hésita encore un peu, puis se releva. Il fit un pas. Moi je ne pouvais pas bouger.
 
-Il n'y eut rien qu'un éclair jaune près de sa cheville. Il demeura un instant immobile. Il ne cria pas. Il tomba doucement comme tombe un arbre. Ca ne fit même pas de bruit, à cause du sable. 
+Il n'y eut rien qu'un éclair jaune près de sa cheville. Il demeura un instant immobile. Il ne cria pas. Il tomba doucement comme tombe un arbre. Ça ne fit même pas de bruit, à cause du sable. 
 
 \incpic{pic/image45.jpeg}
 
@@ -1694,8 +1706,8 @@ Et aucune grande personne ne comprendra jamais que ça a tellement d'importance!
 
 \incpic{pic/image46.jpeg}
 
-Ca c'est pour moi, le plus beau et le plus triste paysage du monde. C'est le même paysage que celui de la page précédente, mais je l'ai dessiné une fois encore pour bien vous le montrer. C'est ici que le petit prince a apparu sur terre, puis disparu.
+Ça c'est pour moi, le plus beau et le plus triste paysage du monde. C'est le même paysage que celui de la page précédente, mais je l'ai dessiné une fois encore pour bien vous le montrer. C'est ici que le petit prince a apparu sur terre, puis disparu.
 
 Regardez attentivement ce paysage afin d'être sûr de le reconnaître, si vous voyagez un jour en Afrique, dans le désert. Et, s'il vous arrive de passer par là, je vous supplie, ne vous pressez pas, attendez un peu juste sous l'étoile! Si alors un enfant vient à vous, s'il rit, s'il a les cheveux d'or, s'il ne répond pas quand on l'interroge, vous devinerez bien qui il est. Alors soyez gentils! Ne me laissez pas tellement triste: écrivez-moi vite qu'il est revenu...
-\end{paracol}
+%\end{paracol}
 \end{document}
