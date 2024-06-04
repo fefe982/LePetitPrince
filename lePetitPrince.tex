@@ -9,6 +9,7 @@
 
 \usepackage{indentfirst}
 \usepackage[colorlinks=true]{hyperref}
+\usepackage[para]{footmisc}
 \usepackage{footnotebackref}
 
 \renewcommand{\chaptername}{Le Chapitre}
@@ -18,16 +19,14 @@
 
 \usepackage{graphicx}
 
-\newcommand{\pos}[1]{\textit{#1}}
-\newcommand{\ft}[3][]{\footnote{%
-\if\relax\detokenize{#1}\relax\else#1: \fi%
-\if\relax\detokenize{#2}\relax\else\pos{#2} \fi%
-#3}}
+\NewDocumentCommand{\pos}{m}{\textit{#1}}
+\NewDocumentCommand{\ft}{O{}mm}{\footnote{\IfBlankF{#1}{#1: }\IfBlankF{#2}{\pos{#2 }}#3}}
 
 %\newcommand{\parachapter}[2][]{\end{paracol}\chapter[#1]{#2}\begin{paracol}{2}}
-\newcommand{\parachapter}[2][]{\chapter[#1]{#2}}
+%\newcommand{\parachapter}[2][]{\chapter[#1]{#2}}
+\NewDocumentCommand{\parachapter}{O{}m}{\IfBlankTF{#1}{\chapter{#2}}{\chapter[#1]{#2}}}
 %\usepackage{paracol}
-\newcommand{\incpic}[1]{%\end{paracol}
+\NewDocumentCommand{\incpic}{m}{
 \begin{center}
     \includegraphics[width=0.25\linewidth]{#1}
 \end{center}%\begin{paracol}{2}
