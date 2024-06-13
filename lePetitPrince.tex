@@ -1,11 +1,15 @@
 % !TeX spellcheck = fr_FR
 \documentclass[a4paper]{report}
 \usepackage[left=0.5in, right=0.5in, top=1.0in, bottom=1.0in]{geometry}
+\raggedbottom
+\hfuzz=10pt
 \usepackage{fontspec}
 \usepackage{polyglossia}
+\usepackage{xeCJK}
 \setmainlanguage{french}
 \setmainfont{Calibri}
 \setotherlanguage[variant=us]{english}
+\setCJKmainfont[AutoFakeSlant=true,AutoFakeBold=true,Ext-B=SimSun-ExtB]{SimSun}
 
 \usepackage{indentfirst}
 \usepackage[colorlinks=true]{hyperref}
@@ -20,7 +24,8 @@
 \usepackage{graphicx}
 
 \NewDocumentCommand{\pos}{m}{\textit{#1}}
-\NewDocumentCommand{\ft}{O{}mm}{\footnote{\IfBlankF{#1}{#1: }\IfBlankF{#2}{\pos{#2 }}#3}}
+\NewDocumentCommand{\ft}{O{}mm}{\footnote{\IfBlankF{#1}{#1: }\IfBlankF{#2}{\pos{#2 }}\textenglish{#3}}}
+\NewDocumentCommand{\ftc}{O{}mm}{\footnote{\IfBlankF{#1}{#1: }\IfBlankF{#2}{\pos{#2 }}#3}}
 
 %\newcommand{\parachapter}[2][]{\end{paracol}\chapter[#1]{#2}\begin{paracol}{2}}
 %\newcommand{\parachapter}[2][]{\chapter[#1]{#2}}
@@ -259,7 +264,7 @@ Car je n'aime pas qu'on lise mon livre à la légère\ft[à la légèr]{loc.adv.
 Alors je tâtonne comme ci et comme ça, tant bien que mal\ft[tant bien que mal]{loc.adv.}{after a fashion, some how}. Je me tromperai enfin sur certains détails plus importants. Mais ça, il faudra me le pardonner. Mon ami ne donnait jamais d'explications. Il me croyait peut-être semblable à lui. Mais moi, malheureusement, je ne sais pas voir les moutons à travers\ft[à travers]{loc.prép.}{through, across} les caisses. Je suis peut-être un peu comme les grandes personnes. J'ai dû vieillir.
 
 \parachapter[V]{} %Le Chapitre V
-Chaque jour j'apprenais quelque chose sur la planète, sur le départ, sur le voyage. Ça venait tout doucement, au hasard des réflexions. C'est ainsi que, le troisième jour, je connus le drame des baobabs.
+Chaque jour j'apprenais quelque chose sur la planète, sur le départ, sur le voyage. Ça venait tout doucement\ft{}{slowly}, au hasard\ft[au hasard]{}{at random} des réflexions. C'est ainsi que, le troisième jour, je connus le drame des baobabs.
 
 Cette fois-ci encore fut grâce\ft[grâce]{n.f.}{favour} au mouton, car brusquement le petit prince m'interrogea, comme pris d'un doute\ft[doute]{n.m.}{doubt} grave:
 
@@ -271,7 +276,7 @@ Cette fois-ci encore fut grâce\ft[grâce]{n.f.}{favour} au mouton, car brusquem
 
 Je ne compris pas pourquoi il était si important que les moutons mangeassent\ft[]{Subj.impar.}{} les arbustes. Mais le petit prince ajouta:
 
--- Par conséquent ils mangent aussi les baobabs?
+-- Par conséquent\ft[par conséquent]{}{consequently} ils mangent aussi les baobabs?
 
 Je fis remarquer au petit prince que les baobabs ne sont pas des arbustes, mais des arbres\ft[arbre]{n.m.}{tree} grand comme des églises\ft[église]{n.f.}{church} et que, si même\ft[même]{adv.}{even} il emportait avec lui tout un troupeau\ft[troupeau]{n.m.}{herd} d'éléphants, ce troupeau ne viendrait pas à bout\ft[bout]{n.m.}{end} d'un seul baobab.
 
@@ -289,9 +294,9 @@ Mais il remarqua avec sagesse\ft[sagesse]{n.f.}{good sense, wisdom}:
 
 Il me répondit: «~Ben! Voyons!~» comme il s'agissait là d'une évidence. Et il me fallut un grand effort d'intelligence pour comprendre à moi seul ce problème.
 
-Et en effet, sur la planète du petit prince, il y avait comme sur toutes les planètes, de bonnes herbes et de mauvaises herbes. Par conséquent de bonnes graines de bonnes herbes et de mauvaises graines de mauvaises herbes. Mais les graines sont invisibles. Elles dorment dans le secret de la terre jusqu'à ce qu'il prenne fantaisie à l'une d'elles de se réveiller. Alors elle s'étire\ft[s'étirer]{v.pr.i.}{to stretch}, et pousse\ft[pousser]{v.t.}{to push} d'abord timidement vers le soleil une ravissante\ft[ravissant]{adj.}{gorgeous, beautiful} petite brindille\ft[brindille]{n.f.}{twig} inoffensive.
+Et en effet, sur la planète du petit prince, il y avait comme sur toutes les planètes, de bonnes herbes et de mauvaises herbes. Par conséquent de bonnes graines de bonnes herbes et de mauvaises graines de mauvaises herbes. Mais les graines sont invisibles. Elles dorment dans le secret de la terre jusqu'à ce qu\ft[jusqu'à ce que]{}{until}'il prenne fantaisie à l'une d'elles de se réveiller. Alors elle s'étire\ft[s'étirer]{v.pr.i.}{to stretch}, et pousse\ft[pousser]{v.t.}{to grow} d'abord timidement vers le soleil une ravissante\ft[ravissant]{adj.}{gorgeous, beautiful} petite brindille\ft[brindille]{n.f.}{twig} inoffensive.
 
-S'il s'agît d'une brindille de radis ou de rosier, on peut la laisser pousser comme elle veut. Mais s'il s'agit d'une mauvaise plante, il faut arracher\ft[arracher]{v.t.}{pull} la plante aussitôt, dès qu'on a su la reconnaître. Or il y avait des graines terribles sur la planète du petit prince... c'étaient les graines de baobabs. Le sol de la planète en était infesté. Or un baobab, si l'on si prend trop tard, on ne peut jamais plus s'en débarrasser\ft[débarrasser]{v.t.}{clear}. Il encombre\ft[encombrer]{v.t.}{to fill} toute la planète. Il la perfore\ft[perforer]{v.t.}{to pierce} de ses racines\ft[racine]{n.f.}{root}. Et si la planète est trop petite, et si les baobabs sont trop nombreux, ils la font éclater\ft[éclater]{v.i.}{to explode}.
+S'il s'agit d\ft[il s'agir de]{}{it's a matter of / it's about}'une brindille de radis\ftc{n.m.}{小红萝卜} ou de rosier\ftc{n.m.}{玫瑰、蔷薇}, on peut la laisser pousser comme elle veut. Mais s'il s'agit d'une mauvaise plante, il faut arracher\ft[arracher]{v.t.}{pull} la plante aussitôt, dès qu\ft[dès que]{}{as soon as}'on a su la reconnaître. Or il y avait des graines terribles sur la planète du petit prince... c'étaient les graines de baobabs. Le sol de la planète en était infesté. Or un baobab, si l'on si prend trop tard, on ne peut jamais plus s'en débarrasser\ft[se débarrasser de]{}{to get rid of}. Il encombre\ft[encombrer]{v.t.}{to fill} toute la planète. Il la perfore\ft[perforer]{v.t.}{to pierce} de ses racines\ft[racine]{n.f.}{root}. Et si la planète est trop petite, et si les baobabs sont trop nombreux, ils la font éclater\ft[éclater]{v.i.}{to explode}.
 
 \incpic{pic/image14.jpeg}
 
@@ -299,12 +304,12 @@ S'il s'agît d'une brindille de radis ou de rosier, on peut la laisser pousser c
 
 \incpic{pic/image15.jpeg}
 
-Et un jour il me conseilla\ft[conseiller]{v.t.}{to recommend} de m'appliquer\ft[s'appliquer à faire]{}{to try to do} à réussir un beau dessin, pour bien faire entrer ça dans la tête des enfants de chez moi. «~S'ils voyagent un jour, me disait-il, ça pourra leur servir. Il est quelquefois sans inconvénient de remettre à plus tard son travail. Mais, s'il s'agit des baobabs, c'est toujours une catastrophe. J'ai connu une planète, habitée par un paresseux\ft[paresseux]{n.m.}{lazy man}. Il avait négligé trois arbustes...~»
+Et un jour il me conseilla\ft[conseiller]{v.t.}{to recommend} de m'appliquer\ft[s'appliquer à faire]{}{to try to do} à réussir un beau dessin, pour bien faire entrer ça dans la tête des enfants de chez moi. «~S'ils voyagent un jour, me disait-il, ça pourra leur servir. Il est quelquefois\ft{}{sometimes} sans inconvénient de remettre à plus tard son travail. Mais, s'il s'agit des baobabs, c'est toujours une catastrophe. J'ai connu une planète, habitée par un paresseux\ft[paresseux]{n.m.}{lazy man}. Il avait négligé trois arbustes...~»
 
-Et, sur les indications du petit prince, j'ai dessiné cette planète-là. Je n'aime guère prendre le ton\ft[ton]{n.m.}{tone} d'un moraliste\ft[moraliste]{n.m.}{moralist}. Mais le danger des baobabs est si peu connu, et les risques courus par celui qui s'égarerait dans un astéroïde sont si considérables, que, pour une fois, je fais exception à ma réserve. Je dis: «~Enfants! Faites attention aux baobabs!~» C'est pour avertir\ft[avertir]{v.t.}{to inform, to warn} mes amis du danger qu'ils frôlaient depuis longtemps, comme moi-même, sans le connaître, que j'ai tant travaillé ce dessin-là. La leçon que je donnais en valait\ft[valoir]{v.t. 3 p.s. Impar.}{to be worth} la peine. Vous vous demanderez peut-être: Pourquoi n'y a-t-il pas dans ce livre, d'autres dessins aussi grandioses que le dessin des baobabs? La réponse est bien simple: J'ai essayé mais je n'ai pas pu réussir. Quand j'ai dessiné les baobabs j'ai été animé\ft[animer]{v.t.}{to motivate} par le sentiment de l'urgence.
+Et, sur les indications du petit prince, j'ai dessiné cette planète-là. Je n'aime guère\ft[ne ... guère]{}{not much / scarely} prendre le ton\ft[ton]{n.m.}{tone} d'un moraliste\ft[moraliste]{n.m.}{moralist}. Mais le danger des baobabs est si peu connu, et les risques courus\ftc[courir un risque]{}{冒风险} par celui qui s'égarerait dans un astéroïde sont si considérables, que, pour une fois, je fais exception à ma réserve. Je dis: «~Enfants! Faites attention aux baobabs!~» C'est pour avertir\ft[avertir]{v.t.}{to inform, to warn} mes amis du danger qu'ils frôlaient depuis longtemps, comme moi-même, sans le connaître, que j'ai tant travaillé ce dessin-là. La leçon que je donnais en valait\ft[valoir]{v.t. 3 p.s. Impar.}{to be worth} la peine. Vous vous demanderez peut-être: Pourquoi n'y a-t-il pas dans ce livre, d'autres dessins aussi grandioses que le dessin des baobabs? La réponse est bien simple: J'ai essayé mais je n'ai pas pu réussir. Quand j'ai dessiné les baobabs j'ai été animé\ft[animer]{v.t.}{to motivate} par le sentiment de l'urgence.
 
 \parachapter[VI]{} %Le Chaptre VI
-Ah! Petit prince, j'ai compris, peu à peu, ainsi, ta petite vie mélancolique. Tu n'avais eu longtemps pour ta distraction que la douceur des couchers du soleil. J'ai appris ce détail nouveau, le quatrième jour au matin, quand tu m'as dit:
+Ah! Petit prince, j'ai compris, peu à peu, ainsi, ta petite vie mélancolique. Tu n'avais eu longtemps pour ta distraction que la douceur\ft{}{softness} des couchers du soleil. J'ai appris ce détail nouveau, le quatrième jour au matin, quand tu m'as dit:
 
 -- J'aime bien les couchers de soleil. Allons voir un coucher de soleil...
 
@@ -324,7 +329,7 @@ En effet. Quand il est midi aux États-Unis, le soleil, tout le monde sait, se c
 
 Et un peu plus tard tu ajoutais:
 
--- Tu sais... quand on est tellement triste on aime les couchers de soleil...
+-- Tu sais... quand on est tellement\ft{adv.}{so much} triste\ft{adj.}{sad} on aime les couchers de soleil...
 
 -- Le jour des quarante-trois fois tu étais donc tellement triste?
 
@@ -345,21 +350,21 @@ Le cinquième jour, toujours grâce au mouton, ce secret de la vie du petit prin
 
 -- Alors les épines, à quoi servent-elles?
 
-Je ne le savais pas. J'étais alors très occupé à essayer de dévisser\ft[dévisser]{v.t.}{loosen} un boulon trop serré\ft[serré]{adj.}{tight} de mon moteur. J'étais très soucieux\ft[soucieux]{adj.}{worried} car ma panne\ft[panne]{n.f.}{break down} commençait de m'apparaître comme très grave, et l'eau à boire qui s'épuisait\ft[épuiser]{v.t.}{to exhaust} me faisait craindre\ft[craindre]{v.t.}{to fear} le pire.
+Je ne le savais pas. J'étais alors très occupé à essayer de dévisser\ft[dévisser]{v.t.}{loosen} un boulon trop serré\ft[serré]{adj.}{tight} de mon moteur. J'étais très soucieux\ft[soucieux]{adj.}{worried} car ma panne\ft[panne]{n.f.}{break down} commençait de m'apparaître\ft{}{to appear} comme très grave, et l'eau à boire qui s'épuisait\ft[s'épuiser]{v.t.}{to run out} me faisait craindre\ft[craindre]{v.t.}{to fear} le pire\ft[le pire]{}{the worst}.
 
 -- Les épines, à quoi servent-elles?
 
 Le petit prince ne renonçait\ft[renoncer]{v.i.}{to give up} jamais à une question, une fois qu'il l'avait posée. J'étais irrité par mon boulon et je répondis n'importe quoi:
 
--- Les épines, ça ne sert à rien, c'est de la pure méchanceté de la part des fleurs!
+-- Les épines, ça ne sert à rien, c'est de la pure méchanceté\ft{}{nastiness} de la part des fleurs!
 
 -- Oh!
 
-Mais après un silence il me lança, avec une sorte de rancune:
+Mais après un silence il me lança, avec une sorte\ft{}{sort, kind} de rancune\ftc{}{仇恨、积恨}:
 
--- Je ne te crois pas! Les fleures sont faibles. Elles sont naïves. Elles se rassurent comme elles peuvent. Elles se croient terribles avec leurs épines...
+-- Je ne te crois pas! Les fleures sont faibles. Elles sont naïves. Elles se rassurent\ft[se rassurer]{}{to be reassured} comme elles peuvent. Elles se croient terribles avec leurs épines...
 
-Je ne répondis rien. A cet instant-là je me disais: «~Si ce boulon résiste encore, je le ferai sauter d'un coup de marteau\ft[]{n.m}{hammer}.~» Le petit prince dérangea de nouveau mes réflexions:
+Je ne répondis rien. A cet instant-là je me disais: «~Si ce boulon résiste encore, je le ferai sauter d'un coup de marteau\ft[]{n.m}{hammer}.~» Le petit prince dérangea\ft{}{to bother, to mess up} de nouveau mes réflexions:
 
 -- Et tu crois, toi, que les fleurs...
 
@@ -369,17 +374,17 @@ Il me regarda stupéfiait.
 
 -- De choses sérieuses!
 
-Il me voyait, mon marteau à la main, et les doigts noirs de cambouis\ft[]{n.m.}{dirty oil}, penché sur un objet qui lui semblait très laid.
+Il me voyait, mon marteau à la main, et les doigts\ft[doigt]{n.m.}{finger} noirs de cambouis\ft[]{n.m.}{dirty oil}, penché sur un objet qui lui semblait très laid\ft{}{ugly}.
 
 -- Tu parles comme les grandes personnes!
 
-Ça me fit un peu honte. Mais, impitoyable, il ajouta:
+Ça me fit un peu honte\ft{}{shame}. Mais, impitoyable\ft{}{merciless}, il ajouta:
 
--- Tu confonds tout... tu mélanges tout!
+-- Tu confonds\ft[confondre]{v.}{to mix up} tout... tu mélanges tout!
 
-Il était vraiment très irrité. Il secouait au vent des cheveux tout dorés:
+Il était vraiment très irrité. Il secouait\ft[secouer]{}{to shake} au vent des cheveux\ft{}{hair} tout dorés\ft[doré]{adj.}{golden}:
 
--- Je connais une planète où il y a un Monsieur cramoisi\ft[]{adj.}{crimson}. Il n'a jamais respiré une fleur. Il n'a jamais regardé une étoile. Il n'a jamais aimé personne. Il n'a jamais rien fait d'autre que des additions. Et toute la journée il répète comme toi: «~Je suis un homme sérieux! Je suis un homme sérieux!~» et ça le fait gonfler\ft[]{v}{to inflate} d'orgueil\ft[]{n.m.}{pride}. Mais ce n'est pas un homme, c'est un champignon! 
+-- Je connais une planète où il y a un Monsieur cramoisi\ft[]{adj.}{crimson}. Il n'a jamais respiré\ft[respirer]{v.t.}{to breathe} une fleur. Il n'a jamais regardé une étoile. Il n'a jamais aimé personne. Il n'a jamais rien fait d'autre que des additions. Et toute la journée il répète comme toi: «~Je suis un homme sérieux! Je suis un homme sérieux!~» et ça le fait gonfler\ft[]{v.}{to inflate} d'orgueil\ft[]{n.m.}{pride}. Mais ce n'est pas un homme, c'est un champignon\ft{}{mushroom}! 
 
 \incpic{pic/image17.jpeg}
 
@@ -387,9 +392,9 @@ Il était vraiment très irrité. Il secouait au vent des cheveux tout dorés:
 
 -- Un champignon!
 
-Le petit prince était maintenant tout pâle de colère.
+Le petit prince était maintenant tout pâle de colère\ft{n.f.}{anger}.
 
--- Il y a des millions d'années que les fleures fabriquent des épines. Il y a des millions d'années que les moutons mangent quand même les fleurs. Et ce n'est pas sérieux de chercher à comprendre pourquoi elles se donnent tant de mal pour se fabriquer des épines qui ne servent jamais à rien? Ce n'est pas important la guerre des moutons et des fleurs? Ce n'est pas sérieux et plus important que les additions d'un gros Monsieur rouge? Et si je connais, moi, une fleur unique au monde, qui n'existe nulle part, sauf dans ma planète, et qu'un petit mouton peut anéantir d'un seul coup, comme ça, un matin, sans se rendre compte de ce qu'il fait, ce n'est pas important ça?
+-- Il y a des millions d'années que les fleures fabriquent\ft[fabriquer]{v.t.}{to make} des épines. Il y a des millions d'années que les moutons mangent quand même les fleurs. Et ce n'est pas sérieux de chercher à comprendre pourquoi elles se donnent tant\ft[tant de]{}{so much} de mal pour se fabriquer des épines qui ne servent jamais à rien? Ce n'est pas important la guerre\ft{n.f.}{war} des moutons et des fleurs? Ce n'est pas sérieux et plus important que les additions d'un gros Monsieur rouge? Et si je connais, moi, une fleur unique au monde, qui n'existe nulle part, sauf dans ma planète, et qu'un petit mouton peut anéantir\ft{v.t.}{to destroy} d'un seul coup, comme ça, un matin, sans se rendre compte de\ft[se rendre compte de qch]{}{to realize sth} ce qu'il fait, ce n'est pas important ça?
 
 Il rougit, puis reprit:
 
